@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/StyleGuideText.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:textSize="@dimen/font_xxxl"
+        android:layout_marginTop="120dp"
+        android:textColor="@color/opaque_white"
+        android:text="@string/talk_screen_new_conversation" />
+
+    <!-- Avatar -->
+
+    <RelativeLayout
+        android:id="@+id/emptyGroupContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:importantForAccessibility="noHideDescendants"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/contact_big_circle_diameter"
+            android:layout_height="@dimen/contact_big_circle_diameter"
+            android:importantForAccessibility="no"
+            android:src="@drawable/party_popper"
+            tools:targetApi="lollipop" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/emptyAddMembersButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white_25"
+        android:orientation="horizontal"
+        android:importantForAccessibility="yes"
+        android:contentDescription="@string/contact_options_add_people"
+        android:layout_marginTop="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            style="@style/OnBoardingText.Font2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:importantForAccessibility="no"
+            android:textAllCaps="true"
+            android:textSize="@dimen/font_m"
+            android:textColor="@color/opaque_white"
+            android:text="@string/contact_options_add_people" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

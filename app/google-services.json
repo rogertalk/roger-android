@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "_REMOVED_",
+    "project_id": "roger-api"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "_REMOVED_",
+        "android_client_info": {
+          "package_name": "com.rogertalk.roger"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "_REMOVED_"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

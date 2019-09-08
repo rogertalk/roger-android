@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/LayoutSidePadding.OnBoarding"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/opaque_white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!-- Photo selection Avatar -->
+    <RelativeLayout
+        android:id="@+id/avatarLayoutContainer"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_marginTopPercent="3%">
+
+        <ImageView
+            android:layout_width="@dimen/settings_photo_diameter"
+            android:layout_height="@dimen/settings_photo_diameter"
+            android:layout_centerInParent="true"
+            android:clickable="false"
+            android:importantForAccessibility="no"
+            android:src="@drawable/circumference_contact_grey" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:lines="2"
+            android:text="@string/settings_add_photo"
+            android:clickable="false"
+            android:textAlignment="center"
+            android:textColor="@color/light_grey"
+            android:textSize="@dimen/font_xs"
+            tools:targetApi="jelly_bean_mr1" />
+
+        <ImageView
+            android:id="@+id/userPhoto"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:clickable="false"
+            android:importantForAccessibility="no"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/userPhotoOverlay"
+            android:layout_width="@dimen/settings_photo_inner_diameter"
+            android:layout_height="@dimen/settings_photo_inner_diameter"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/contact_ripple"
+            android:contentDescription="@string/ac_settings_avatar" />
+
+    </RelativeLayout>
+
+    <!-- Title and description -->
+    <TextView
+        android:id="@+id/titleLabel"
+        style="@style/OnBoardingText.FontSlogan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/avatarLayoutContainer"
+        android:text="@string/name_query_title"
+        android:textColor="@color/s_dark_grey"
+        app:layout_marginTopPercent="2%" />
+
+    <TextView
+        android:id="@+id/descriptionLabel"
+        style="@style/OnBoardingText.Font3.A"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleLabel"
+        app:layout_marginTopPercent="0.2%"
+        android:alpha="0"
+        android:text="@string/name_query_desc"
+        tools:alpha="1" />
+
+    <EditText
+        android:id="@+id/nameInput"
+        style="@style/OnBoardingEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/descriptionLabel"
+        app:layout_marginTopPercent="3%"
+        android:hint="@string/placeholder_name"
+        android:imeOptions="actionGo"
+        android:inputType="textPersonName|textCapWords"
+        android:nextFocusForward="@+id/confirmNameButton"
+        android:theme="@style/OnBoardingEditText" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameInput"
+        app:layout_marginTopPercent="1%"
+        app:layout_marginBottomPercent="2%">
+
+        <com.rogertalk.roger.ui.view.BlueButton
+            android:id="@+id/confirmNameButton"
+            style="@style/OnBoardingButton.Blue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/on_boarding_button_height"
+            android:enabled="false"
+            android:text="@string/confirm_name"
+            android:theme="@style/OnBoardingButton.Blue" />
+
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:id="@+id/progressWheel"
+            style="@style/OnBoardingCircleProgress.White"
+            android:layout_width="@dimen/circle_progress_radius"
+            android:layout_height="@dimen/circle_progress_radius"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </RelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>

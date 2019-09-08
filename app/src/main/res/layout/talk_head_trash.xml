@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:importantForAccessibility="noHideDescendants"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/circumference_black" />
+
+    <ImageView
+        android:id="@+id/innerCircle"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/circle_white_80" />
+
+    <com.mikepenz.iconics.view.IconicsTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="{gmd-delete}"
+        android:textColor="@color/s_red"
+        android:textSize="@dimen/font_xl"
+        android:layout_centerInParent="true"
+        tools:ignore="HardcodedText"
+        tools:text="||" />
+
+</RelativeLayout>

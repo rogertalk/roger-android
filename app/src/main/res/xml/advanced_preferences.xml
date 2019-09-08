@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="advanced_preferences_screen">
+    <CheckBoxPreference
+        android:key="record_stereo"
+        android:title="Stereo Recording" />
+
+    <PreferenceScreen
+        android:key="bitrate_preferences_screen"
+        android:title="Recording Bitrate">
+
+        <CheckBoxPreference
+            android:key="prefer_wifi"
+            android:title="Prefer WiFi" />
+
+    </PreferenceScreen>
+
+    <ListPreference
+        android:title="Recording Sampling Rate"
+        android:key="recording_sampling_rate"
+        android:summary="Sampling rate of when recording." />
+
+    <CheckBoxPreference
+        android:key="force_disable_noise_suppression"
+        android:title="Force disable Noise Suppression"
+        android:summary="By default Roger lets the OS decide what sound processing to use during recording." />
+
+
+</PreferenceScreen>

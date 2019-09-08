@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="OnBoardingButton.Blue">
+        <item name="android:layout_marginLeft">45dp</item>
+        <item name="android:layout_marginRight">45dp</item>
+        <item name="android:colorButtonNormal">@color/button_background_color</item>
+        <item name="android:textColor">@color/opaque_white</item>
+    </style>
+
+    <style name="OnBoardingButton.WhiteBlueText">
+        <item name="android:colorButtonNormal">@color/opaque_white</item>
+        <item name="android:textColor">@color/button_blue</item>
+    </style>
+
+</resources>

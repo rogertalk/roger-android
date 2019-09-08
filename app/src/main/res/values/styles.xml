@@ -1,0 +1,72 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/medium_blue</item>
+        <item name="colorPrimaryDark">@color/dark_blue</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowContentTransitions" tools:ignore="NewApi">true</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.Base.Fullscreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="AppTheme.Base.Fullscreen.TalkScreen">
+        <item name="colorControlNormal">@color/opaque_white</item>
+    </style>
+
+    <style name="AppTheme.Base.Windowed" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <style name="EditTextLight" parent="android:Widget.EditText">
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="OnBoardingButton">
+        <item name="android:textSize">@dimen/on_boarding_font2</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:elevation" tools:targetApi="lollipop">@dimen/elevation_l1</item>
+    </style>
+
+    <style name="OnBoardingEditText" parent="Theme.AppCompat.Light">
+        <item name="android:editTextStyle">@style/EditTextLight</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/on_boarding_font1</item>
+        <item name="android:textColor">@color/ob_dark_grey</item>
+        <item name="android:textColorHint">@color/light_grey</item>
+        <item name="android:textColorHintInverse">@color/light_grey</item>
+        <item name="android:textColorHighlight">@color/light_grey</item>
+        <item name="android:textColorSecondary">@color/light_grey</item>
+        <item name="colorControlNormal">@color/light_grey</item>
+        <item name="colorControlActivated">@color/light_grey</item>
+        <item name="colorControlHighlight">@color/light_grey</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:layout_marginLeft">30dp</item>
+    </style>
+
+    <style name="OnBoardingButton.Blue">
+        <item name="android:layout_marginLeft">45dp</item>
+        <item name="android:layout_marginRight">45dp</item>
+        <item name="android:background">@drawable/button_selector</item>
+        <item name="android:textColor">@color/opaque_white</item>
+    </style>
+
+    <style name="OnBoardingButton.WhiteBlueText">
+        <item name="android:background">@drawable/round_white_rect</item>
+        <item name="android:textColor">@color/button_blue</item>
+    </style>
+
+    <style name="OnBoardingCircleProgress">
+        <item name="android:elevation" tools:targetApi="lollipop">@dimen/elevation_l1</item>
+        <item name="matProg_barColor">@color/button_blue</item>
+        <item name="matProg_progressIndeterminate">true</item>
+    </style>
+
+    <style name="OnBoardingCircleProgress.White">
+        <item name="android:elevation" tools:targetApi="lollipop">@dimen/elevation_l1</item>
+        <item name="matProg_barColor">@color/opaque_white</item>
+    </style>
+</resources>

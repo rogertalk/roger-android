@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Squared group image - This draws Offscreen -->
+
+    <RelativeLayout
+        android:id="@+id/groupSquarePreview"
+        android:layout_width="@dimen/contact_biggest_circle_diameter_shadow"
+        android:layout_height="@dimen/contact_biggest_circle_diameter_shadow"
+        android:layout_marginLeft="-180dp"
+        android:importantForAccessibility="noHideDescendants"
+        tools:ignore="RtlHardcoded">
+
+        <ImageView
+            android:id="@+id/squareImage1"
+            android:layout_width="@dimen/contact_biggest_circle_diameter_shadow_half"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@color/opaque_black" />
+
+        <ImageView
+            android:id="@+id/squareImage2"
+            android:layout_width="@dimen/contact_biggest_circle_diameter_shadow_half"
+            android:layout_height="@dimen/contact_biggest_circle_diameter_shadow_half"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerCrop"
+            android:src="@color/opaque_black" />
+
+        <ImageView
+            android:id="@+id/squareImage3"
+            android:layout_width="@dimen/contact_biggest_circle_diameter_shadow_half"
+            android:layout_height="@dimen/contact_biggest_circle_diameter_shadow_half"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerCrop"
+            android:src="@color/opaque_black" />
+
+        <!-- 2nd Vertical photo, for groups with 2 people -->
+        <ImageView
+            android:id="@+id/squareImage4"
+            android:layout_width="@dimen/contact_biggest_circle_diameter_shadow_half"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerCrop"
+            android:src="@color/opaque_black" />
+
+
+    </RelativeLayout>
+
+
+    <!-- Card background. Has the 4 possible states for transition effects -->
+
+    <View
+        android:id="@+id/cardNightBackgroundView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/night_background" />
+
+    <View
+        android:id="@+id/cardDayBackgroundView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/day_background" />
+
+    <View
+        android:id="@+id/cardSunriseBackgroundView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/sunrise_background" />
+
+    <View
+        android:id="@+id/cardSunsetBackgroundView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/sunset_background" />
+
+    <!-- Top Messages -->
+
+    <LinearLayout
+        android:id="@+id/topMessageContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/s_dark_grey"
+        android:visibility="gone"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        tools:visibility="visible"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/topMessageLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white_80"
+            style="@style/StyleGuideText.SubHeader"
+            android:text="@string/offline_message_talk_screen" />
+
+    </LinearLayout>
+
+    <!-- Top Navigation controls -->
+
+    <LinearLayout
+        android:id="@+id/topNavigationControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/default_side_padding"
+        android:layout_marginLeft="@dimen/default_side_padding"
+        android:layout_marginRight="@dimen/default_side_padding"
+        android:layout_marginStart="@dimen/default_side_padding"
+        android:layout_marginTop="@dimen/default_side_padding"
+        android:baselineAligned="false"
+        android:layout_below="@+id/topMessageContainer"
+        android:fitsSystemWindows="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Group participants ribbon -->
+        <RelativeLayout
+            android:id="@+id/groupParticipantsContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:importantForAccessibility="no"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" />
+
+        <!-- Last Ribbon Element -->
+        <include
+            android:id="@+id/groupManagementElement"
+            layout="@layout/participant_ribbon_elem"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/membersLabels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/topNavigationControls"
+        android:layout_marginRight="@dimen/default_side_padding"
+        android:layout_marginTop="2dp"
+        android:importantForAccessibility="no"
+        android:text="@string/talk_screen_members_label"
+        android:textColor="@color/white_80"
+        android:textSize="@dimen/font_m" />
+
+    <RelativeLayout
+        android:id="@+id/rel_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!-- This element is here for text alignment with the microphone -->
+        <View
+            android:id="@+id/micSpaceGuide"
+            android:layout_width="100dp"
+            android:layout_height="10dp"
+            android:layout_above="@+id/bottomSpace"
+            android:layout_centerHorizontal="true" />
+
+        <View
+            android:id="@+id/topMessageSpaceGuide"
+            android:layout_width="2dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_height="25dp" />
+
+        <!-- MIDDLE BOTTOM AREA (Weather) -->
+
+        <RelativeLayout
+            android:id="@+id/cardInfoAccessibility"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_above="@+id/bottomSpace"
+            android:layout_marginBottom="-2dp"
+            android:layout_toLeftOf="@id/micSpaceGuide"
+            android:importantForAccessibility="yes">
+
+            <!-- Contact Local Time, City, and Weather  -->
+
+            <TextView
+                android:id="@+id/localTimeLabel"
+                style="@style/WhiteText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="@dimen/default_side_padding"
+                android:layout_marginLeft="@dimen/default_side_padding"
+                android:importantForAccessibility="no"
+                android:textSize="@dimen/font_caption"
+                tools:ignore="RelativeOverlap"
+                tools:text="1:18 PM"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/cityLabel"
+                style="@style/WhiteText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/localTimeLabel"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/default_side_padding"
+                android:gravity="left"
+                android:importantForAccessibility="no"
+                android:textSize="@dimen/font_caption"
+                tools:text="New York"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/weatherConditionLabel"
+                style="@style/WhiteText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/default_side_padding"
+                android:layout_toRightOf="@id/localTimeLabel"
+                android:importantForAccessibility="no"
+                android:textSize="@dimen/font_caption"
+                android:visibility="gone"
+                tools:text="20o"
+                tools:visibility="visible" />
+
+            <com.pixplicity.fontview.FontTextView
+                android:id="@+id/weatherIconLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/localTimeLabel"
+                android:layout_toRightOf="@id/weatherConditionLabel"
+                android:importantForAccessibility="no"
+                android:textColor="@color/opaque_white"
+                android:textSize="@dimen/font_s"
+                app:pix_font="WeatherTime.ttf"
+                tools:text=" O " />
+
+
+            <TextView
+                android:id="@+id/enableGlimpsesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/default_side_padding"
+                android:layout_marginLeft="@dimen/default_side_padding"
+                android:text="@string/glimpses_enable"
+                android:textColor="@color/opaque_white"
+                android:textSize="@dimen/font_caption"
+                tools:visibility="gone" />
+
+        </RelativeLayout>
+
+        <!-- BOTTOM AREA and CONVERSATIONS LIST -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/conversations_list_height"
+            android:layout_above="@+id/bottomSpace"
+            android:layout_alignParentBottom="true"
+            android:background="@color/opaque_white" />
+
+        <View
+            android:id="@+id/bottomSpace"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/conversations_list_height"
+            android:layout_alignParentBottom="true" />
+
+
+        <View
+            android:id="@+id/bottomSpaceWithMic"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_alignParentBottom="true" />
+
+        <!-- Bottom Buttons -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="12dp"
+            android:paddingTop="10dp"
+            android:orientation="horizontal">
+
+            <!-- Conversations Button -->
+            <RelativeLayout
+                android:id="@+id/conversationsButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/talk_screen_conversations_label"
+                android:importantForAccessibility="yes">
+
+                <LinearLayout
+                    android:id="@+id/conversationsButtonArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingTop="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.mikepenz.iconics.view.IconicsTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:importantForAccessibility="no"
+                        android:text="{gmd-question-answer}"
+                        android:textColor="@color/s_medium_grey"
+                        android:textSize="@dimen/font_xl"
+                        tools:ignore="HardcodedText"
+                        tools:text="[ ]" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:importantForAccessibility="no"
+                        android:text="@string/talk_screen_conversations_label"
+                        android:textColor="@color/s_medium_grey"
+                        android:textSize="@dimen/font_m" />
+
+                </LinearLayout>
+
+                <!-- Conversations CTA -->
+                <FrameLayout
+                    android:id="@+id/conversationsCTA"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_alignBottom="@id/conversationsButtonArea"
+                    android:layout_alignRight="@id/conversationsButtonArea"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="35dp"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    android:background="@drawable/circle_red">
+
+                    <TextView
+                        android:id="@+id/conversationsLabelCTA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="99"
+                        android:textColor="@color/opaque_white"
+                        android:textSize="@dimen/font_xs"
+                        tools:ignore="HardcodedText" />
+
+                </FrameLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:importantForAccessibility="noHideDescendants"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/talk_screen_talk_label"
+                    android:textColor="@color/s_medium_grey"
+                    android:textSize="@dimen/font_m" />
+
+            </LinearLayout>
+
+            <!-- Settings Button -->
+            <LinearLayout
+                android:id="@+id/settingsButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/settings_button"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:importantForAccessibility="yes"
+                android:orientation="vertical">
+
+                <com.mikepenz.iconics.view.IconicsTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:importantForAccessibility="no"
+                    android:text="{gmd-settings}"
+                    android:textColor="@color/s_medium_grey"
+                    android:textSize="@dimen/font_xl"
+                    tools:ignore="HardcodedText"
+                    tools:text="[ ]" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:importantForAccessibility="no"
+                    android:text="@string/settings_button"
+                    android:textColor="@color/s_medium_grey"
+                    android:textSize="@dimen/font_m" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- LISTENING DRAMATIC BACKGROUND -->
+        <View
+            android:id="@+id/listeningDramaticBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_80"
+            android:visibility="gone" />
+
+
+        <!-- CENTRAL CONTROLS -->
+
+        <RelativeLayout
+            android:id="@+id/centralControls"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:layout_above="@+id/bottomSpaceWithMic">
+
+            <!-- Audio Controls -->
+            <include
+                android:id="@+id/playbackControlsRibbon"
+                layout="@layout/talk_screen_audio_controls"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/idleControlsRibbon"
+                layout="@layout/talk_screen_idle_controls"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </RelativeLayout>
+
+        <!-- Bottom Message -->
+
+        <com.mikepenz.iconics.view.IconicsTextView
+            android:id="@+id/bottomMessage"
+            style="@style/StyleGuideText.SubHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_side_padding"
+            android:layout_marginLeft="@dimen/default_side_padding"
+            android:layout_marginRight="@dimen/default_side_padding"
+            android:layout_marginStart="@dimen/default_side_padding"
+            android:layout_marginBottom="30dp"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/s_red"
+            android:text="@string/raise_to_listen_private"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:gravity="center" />
+
+
+        <!-- CENTRAL AREA (Avatar, Title, etc) -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-25dp"
+            android:layout_below="@+id/topMessageSpaceGuide"
+            android:layout_above="@+id/centralControls">
+
+            <!-- Various Options for central area  go here -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/userTitleAccessibility">
+
+                <!-- Content in the central area -->
+                <include
+                    android:id="@+id/avatarGenericContent"
+                    layout="@layout/talk_avatar_generic"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/userTitleAccessibility">
+
+                <!-- Empty Conversation - Center Avatar -->
+                <include
+                    android:id="@+id/avatarEmptyGroupContent"
+                    layout="@layout/talk_avatar_empty_group"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <!-- DRAMATIC RECORDING BACKGROUND -->
+    <!-- RECORDING ( MIC and other related elements ) -->
+
+    <View
+        android:id="@+id/recordingDramaticBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_80"
+        android:visibility="gone" />
+
+    <!-- Conversations List -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/conversationsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false"
+        android:focusableInTouchMode="true"
+        android:contentDescription="@string/ac_conversations_list"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+    <!-- Soundojis row 1 -->
+
+    <LinearLayout
+        android:id="@+id/soundojiRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/soundojiLaughing"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/circumference_60_white"
+            android:contentDescription="@string/ac_laughing"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:importantForAccessibility="no"
+                android:src="@drawable/emoji_laught" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/soundojiAwkwardCricket"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/circumference_60_white"
+            android:contentDescription="@string/ac_cricket"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:importantForAccessibility="no"
+                android:src="@drawable/emoji_bug" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/soundojiRimshot"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/circumference_60_white"
+            android:contentDescription="@string/ac_rimshot"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:importantForAccessibility="no"
+                android:src="@drawable/emoji_drama" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+    <!-- MICROPHONE -->
+
+    <ImageView
+        android:id="@+id/recordingVisualizer"
+        android:layout_width="98dp"
+        android:layout_height="98dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/audio_feedback_circle"
+        android:importantForAccessibility="no" />
+
+    <!-- Recording Button -->
+    <com.rogertalk.roger.ui.view.RecordingButtonWrapper
+        android:id="@+id/recordingButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:clickable="true"
+        android:contentDescription="@string/ac_microphone"
+        android:focusable="true"
+        android:importantForAccessibility="yes">
+
+        <View
+            android:id="@+id/smileBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="22dp"
+            android:background="@drawable/night_gradient_bg" />
+
+        <ImageView
+            android:id="@+id/smileShadow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="2dp"
+            android:background="@drawable/smile_shadow" />
+
+        <ImageView
+            android:id="@+id/action_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="2dp"
+            android:background="@drawable/smile" />
+
+    </com.rogertalk.roger.ui.view.RecordingButtonWrapper>
+
+    <!-- Recording Extra Info -->
+
+    <TextView
+        android:id="@+id/talkingWithLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="200dp"
+        android:textColor="@color/roger_red"
+        android:textSize="@dimen/font_l"
+        android:visibility="gone"
+        tools:text="Talking with Bananas"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/talkNearMicrophoneLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="180dp"
+        android:text="@string/talk_screen_speak_close"
+        android:textColor="@color/white_60"
+        android:textSize="@dimen/font_m"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+
+</RelativeLayout>

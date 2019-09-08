@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:orientation="vertical">
+
+    <!-- Toolbar -->
+    <include layout="@layout/white_toolbar" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/botLobbyList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:fadingEdge="vertical"
+        android:scrollbars="vertical" />
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:paddingRight="4dp"
+    android:layout_height="38dp">
+
+    <RelativeLayout
+        android:id="@+id/elemParent"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="5dp"
+        android:paddingRight="12dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_ch_avatar"
+            android:layout_width="32dp"
+            android:layout_height="32dp">
+
+            <ImageView
+                android:id="@+id/iv_ch_person"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerInParent="true"
+                android:alpha="0.3"
+                android:background="@drawable/ic_person_24dp"
+                android:gravity="center" />
+
+            <ImageView
+                android:id="@+id/ri_ch_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAccessibility="no"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/iv_ch_close"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerInParent="true"
+                android:alpha="0"
+                android:background="@drawable/ic_close_24dp"
+                android:gravity="center" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_ch_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/rl_ch_avatar"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/opaque_black"
+            android:text="@string/lorem_ipsum"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="contact_biggest_circle_diameter">100dp</dimen>
+    <dimen name="contact_biggest_circle_diameter_outer">107dp</dimen>
+    <dimen name="playback_visualizer_diameter">117dp</dimen>
+
+</resources>

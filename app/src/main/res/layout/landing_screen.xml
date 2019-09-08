@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/LayoutSidePadding.OnBoarding"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/day_background"
+    android:fitsSystemWindows="true">
+
+
+    <TextView
+        android:id="@+id/titleLabel"
+        style="@style/OnBoardingText.Font1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/landing_welcome_to_roger"
+        app:layout_marginTopPercent="10%"
+        android:textColor="@color/opaque_white" />
+
+    <TextView
+        android:id="@+id/messageLabel"
+        style="@style/OnBoardingText.FontSlogan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleLabel"
+        app:layout_marginTopPercent="20%"
+        app:layout_widthPercent="80%"
+        android:layout_centerHorizontal="true"
+        android:text="@string/landing_welcome_message"
+        android:textColor="@color/opaque_white" />
+
+
+    <com.rogertalk.roger.ui.view.BlueButton
+        android:id="@+id/getStartedButton"
+        style="@style/OnBoardingButton.WhiteBlueText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/on_boarding_button_height"
+        android:layout_below="@id/messageLabel"
+        app:layout_marginTopPercent="20%"
+        android:layout_centerHorizontal="true"
+        app:layout_widthPercent="90%"
+        android:text="@string/get_started"
+        android:theme="@style/OnBoardingButton.WhiteBlueText" />
+
+
+    <!-- Terms and Services -->
+
+    <TextView
+        android:id="@+id/termsAndServicesTop"
+        style="@style/OnBoardingText.Font3.B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_marginTopPercent="8%"
+        android:layout_below="@id/getStartedButton"
+        android:text="@string/landing_welcome_description"
+        android:textColor="@color/white_80"
+        android:textSize="@dimen/font_s" />
+
+    <TextView
+        android:id="@+id/termsAndServicesButton"
+        style="@style/OnBoardingText.Font3.B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/termsAndServicesTop"
+        android:text="@string/terms_of_service"
+        android:textColor="@color/white_95"
+        android:textSize="@dimen/font_s" />
+
+</android.support.percent.PercentRelativeLayout>

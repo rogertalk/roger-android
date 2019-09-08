@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/s_accent_grey_2">
+
+    <LinearLayout
+        android:id="@+id/sectionParent"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="38dp">
+    <TextView
+        android:id="@+id/sectionName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/default_side_padding"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/s_medium_grey"
+        android:textSize="@dimen/font_body"
+        android:textAllCaps="true"
+        android:text="@string/suggested_contacts" />
+
+    </LinearLayout>
+
+</LinearLayout>

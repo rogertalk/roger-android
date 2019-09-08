@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/s_dark_grey"
+    android:orientation="vertical">
+
+    <com.theartofdev.edmodo.cropper.CropImageView
+        android:id="@+id/cropImageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:cropScaleType="fitCenter" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/cropImageButton"
+            style="@style/OnBoardingButton.Blue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/on_boarding_button_height"
+            android:layout_margin="@dimen/default_side_padding"
+            android:text="@string/settings_crop_button"
+            android:theme="@style/OnBoardingButton.Blue"/>
+
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:id="@+id/progressWheel"
+            style="@style/OnBoardingCircleProgress.White"
+            android:layout_width="@dimen/circle_progress_radius"
+            android:layout_height="@dimen/circle_progress_radius"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

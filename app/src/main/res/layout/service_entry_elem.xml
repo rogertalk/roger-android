@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/serviceTopElem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/opaque_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/default_side_padding"
+        android:paddingRight="@dimen/default_side_padding">
+
+        <!-- Contact Circle -->
+
+        <RelativeLayout
+            android:id="@+id/contactAvatar"
+            android:layout_width="@dimen/contact_screen_avatar_circle_diameter"
+            android:layout_height="@dimen/contact_screen_avatar_circle_diameter">
+
+            <!-- Photo -->
+            <ImageView
+                android:id="@+id/serviceAvatar"
+                android:layout_width="@dimen/contact_screen_avatar_circle_diameter"
+                android:layout_height="@dimen/contact_screen_avatar_circle_diameter"
+                android:importantForAccessibility="no"
+                android:layout_centerInParent="true"
+                android:src="@drawable/pee" />
+
+        </RelativeLayout>
+
+        <!-- Name and Origin -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/serviceNameLabel"
+                style="@style/StyleGuideText.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:maxLines="2"
+                android:textColor="@color/s_dark_grey"
+                tools:ignore="RtlHardcoded"
+                tools:text="Contact Name" />
+
+            <TextView
+                android:id="@+id/serviceDescriptionLabel"
+                style="@style/WhiteText.Status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:maxLines="2"
+                android:textSize="13sp"
+                android:textColor="@color/s_light_grey"
+                tools:text="Contact Origin"
+                tools:ignore="RtlHardcoded" />
+
+        </LinearLayout>
+
+        <!-- Right Side actions -->
+
+        <com.mikepenz.iconics.view.IconicsTextView
+            android:id="@+id/infoButton"
+            style="@style/StyleGuideText.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="{gmd-keyboard-arrow-right}"
+            android:textColor="@color/settings_light_grey"
+            android:padding="6dp"
+            android:importantForAccessibility="no"
+            tools:ignore="HardcodedText"
+            tools:text=">" />
+
+
+    </LinearLayout>
+
+    <!-- Separator line -->
+
+    <View style="@style/HorizontalSeparator" />
+
+</LinearLayout>

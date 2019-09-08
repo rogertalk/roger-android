@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="SettingsHeaderElement">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:paddingLeft">@dimen/default_side_padding</item>
+        <item name="android:paddingRight">@dimen/default_side_padding</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:background">@color/s_accent_grey_2</item>
+        <item name="android:textAlignment" tools:targetApi="jelly_bean_mr1">gravity</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/font_s</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:text">@string/your_account_title</item>
+        <item name="android:textColor">@color/s_medium_grey</item>
+    </style>
+
+    <style name="SettingsBottomInfoElement">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">30dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingLeft">@dimen/default_side_padding</item>
+        <item name="android:paddingRight">@dimen/default_side_padding</item>
+        <item name="android:background">@color/s_accent_grey_2</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/s_medium_grey</item>
+        <item name="android:textSize">@dimen/font_caption</item>
+    </style>
+
+    <style name="SettingsElementLayout">
+        <item name="android:layout_height">72dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/default_side_padding</item>
+        <item name="android:paddingRight">@dimen/default_side_padding</item>
+        <item name="android:background">@color/s_background_white</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="SettingsElementLayout.Ripple">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="mrl_rippleOverlay">true</item>
+        <item name="mrl_rippleColor">@color/opaque_black</item>
+        <item name="mrl_rippleHover">true</item>
+        <item name="mrl_rippleDelayClick">true</item>
+        <item name="mrl_rippleFadeDuration">50</item>
+    </style>
+
+    <style name="SettingsInnerTextElement">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/s_dark_grey</item>
+        <item name="android:textSize">@dimen/font_body</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+
+    <style name="SettingsHeaderEditTextView">
+        <!-- LEAVE THIS AT NULL, OR ELSE THE APP WILL CRASH BECAUSE OF AN ANDROID BUG -->
+        <item name="android:fontFamily">@null</item>
+        <item name="colorPrimary">@color/opaque_white</item>
+        <item name="colorPrimaryDark">@color/opaque_white</item>
+        <item name="colorAccent">@color/opaque_white</item>
+        <item name="colorControlNormal">@color/opaque_white</item>
+        <item name="colorControlActivated">@color/opaque_white</item>
+        <item name="colorControlHighlight">@color/opaque_white</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <!-- ToolBar -->
+    <style name="ToolBarStyle" parent="Theme.AppCompat">
+        <item name="android:textColorPrimary">@color/opaque_white</item>
+        <item name="android:textColorSecondary">@color/opaque_white</item>
+        <item name="actionMenuTextColor">@color/opaque_white</item>
+    </style>
+
+    <style name="ToolBarStyle.Dark" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:textColorPrimary">@color/s_dark_grey</item>
+        <item name="android:textColorSecondary">@color/s_dark_grey</item>
+        <item name="actionMenuTextColor">@color/s_dark_grey</item>
+    </style>
+</resources>

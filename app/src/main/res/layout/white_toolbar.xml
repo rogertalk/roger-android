@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:background="@color/s_accent_grey_2"
+    android:elevation="@dimen/elevation_l1"
+    android:gravity="center_vertical"
+    android:theme="@style/ToolBarStyle.Dark"
+    app:popupTheme="@style/ThemeOverlay.AppCompat"
+    tools:ignore="UnusedAttribute">
+
+
+    <com.mikepenz.iconics.view.IconicsTextView
+        android:id="@+id/rightTopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/default_side_padding"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:importantForAccessibility="yes"
+        android:padding="6dp"
+        android:text="{gmd-check}"
+        android:textColor="@color/s_medium_grey"
+        android:textSize="@dimen/font_xl"
+        tools:ignore="HardcodedText,RtlHardcoded"
+        tools:text="V" />
+
+
+</android.support.v7.widget.Toolbar>

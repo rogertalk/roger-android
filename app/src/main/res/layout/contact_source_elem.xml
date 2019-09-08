@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/topElem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/opaque_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:gravity="center_vertical"
+        android:baselineAligned="false"
+        android:paddingLeft="@dimen/default_side_padding"
+        android:paddingRight="@dimen/default_side_padding">
+
+        <!-- Contact Circle -->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!-- Photo -->
+
+            <ImageView
+                android:id="@+id/avatarBackground"
+                android:layout_width="@dimen/contact_screen_avatar_circle_diameter"
+                android:layout_height="@dimen/contact_screen_avatar_circle_diameter"
+                android:importantForAccessibility="no"
+                android:layout_centerInParent="true"
+                android:src="@drawable/addressbook" />
+
+
+            <!-- Handle Icon -->
+
+            <TextView
+                android:id="@+id/handleIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_title"
+                android:layout_centerInParent="true"
+                android:text="\@"
+                android:paddingBottom="5dp"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:textColor="@color/opaque_white"
+                tools:ignore="HardcodedText" />
+
+            <!-- Contact circle initials  -->
+
+            <com.mikepenz.iconics.view.IconicsTextView
+                android:id="@+id/avatarIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="{gmd-contacts}"
+                android:textColor="@color/opaque_white"
+                android:textSize="@dimen/font_title"
+                android:importantForAccessibility="no"
+                android:layout_centerInParent="true"
+                tools:ignore="HardcodedText"
+                tools:text="o" />
+
+
+        </RelativeLayout>
+
+        <!-- Name and Origin -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sourceLabel"
+                style="@style/StyleGuideText.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_side_padding"
+                android:layout_marginLeft="@dimen/default_side_padding"
+                android:ellipsize="end"
+                android:text="@string/lobby_address_book"
+                android:gravity="left"
+                android:maxLines="2"
+                android:textColor="@color/s_dark_grey"
+                tools:ignore="RtlHardcoded" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!-- Separator line -->
+
+    <View style="@style/HorizontalSeparator" />
+
+</LinearLayout>

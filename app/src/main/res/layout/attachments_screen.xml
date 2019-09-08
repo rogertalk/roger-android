@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/night_background"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/attachmentImage"
+            android:importantForAccessibility="no"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:id="@+id/loadingImageProgress"
+            style="@style/OnBoardingCircleProgress.White"
+            android:layout_width="@dimen/circle_progress_radius"
+            android:layout_height="@dimen/circle_progress_radius"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/emptyMessageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <com.mikepenz.iconics.view.IconicsTextView
+                android:id="@+id/attachmentIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/opaque_white"
+                android:text="{gmd-photo-library}"
+                android:importantForAccessibility="no"
+                android:layout_gravity="center"
+                android:textSize="100sp"
+                android:layout_marginBottom="40dp"
+                tools:text="="
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/descriptionLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:textColor="@color/opaque_white"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:textSize="@dimen/font_l"
+                android:text="@string/attachments_empty" />
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/replaceButton"
+        style="@style/OnBoardingButton.Blue"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/on_boarding_button_height"
+        android:layout_margin="@dimen/default_side_padding"
+        android:text="@string/attachments_replace"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:theme="@style/OnBoardingButton.Blue" />
+
+
+    <!-- Recording UI -->
+
+    <ImageView
+        android:id="@+id/recordingVisualizer"
+        android:layout_width="98dp"
+        android:layout_height="98dp"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/audio_feedback_circle"
+        android:importantForAccessibility="no" />
+
+    <!-- Recording Button -->
+    <com.rogertalk.roger.ui.view.RecordingButtonWrapper
+        android:id="@+id/recordingButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:contentDescription="@string/ac_microphone"
+        android:focusable="true"
+        android:importantForAccessibility="yes">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="22dp"
+            android:background="@drawable/night_gradient_bg" />
+
+        <ImageView
+            android:id="@+id/smileShadow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="2dp"
+            android:background="@drawable/smile_shadow" />
+
+        <ImageView
+            android:id="@+id/action_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="2dp"
+            android:background="@drawable/smile" />
+
+    </com.rogertalk.roger.ui.view.RecordingButtonWrapper>
+
+
+    <!-- Toolbar -->
+    <include layout="@layout/white_translucent_toolbar" />
+
+
+</RelativeLayout>

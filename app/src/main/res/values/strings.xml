@@ -1,0 +1,458 @@
+<resources>
+    <!-- Un-translatable content -->
+    <string name="app_name" translatable="false">Roger</string>
+
+    <!-- Messages -->
+    <string name="offline_message">Waiting for network</string>
+    <string name="offline_message_talk_screen">You can still talk while offline</string>
+    <string name="wait_generic">Please wait…</string>
+
+    <!-- Errors -->
+    <string name="error_generic_title">Oops!</string>
+    <string name="error_generic_403">Error: Already in use</string>
+    <string name="error_wrong_code">Wrong code</string>
+
+    <!-- General -->
+    <string name="active_on_roger">Active on Roger</string>
+    <string name="on_roger">on Roger</string>
+    <string name="hasnt_joined">Hasn\'t joined yet</string>
+    <string name="cancel">Cancel</string>
+    <string name="unknown_person">Someone</string>
+    <string name="default_group_name">Roger Conversation</string>
+    <string name="you">You</string>
+
+    <!-- Audio - Related -->
+    <string name="audio_playback_speed_cant_change">Cannot change speed if not playing</string>
+
+    <!-- Placeholders and Hints-->
+    <string name="placeholder_name">Full Name</string>
+
+    <!-- CTAs -->
+    <string name="overlay_add_conversations">This is how you start conversations. Go ahead and tap it.</string>
+    <string name="overlay_tap_to_listen">Tap or raise to your ear like a phone call to listen</string>
+    <string name="overlay_tap_to_talk">Tap and say "Hello"</string>
+    <string name="overlay_manage_conversation">Here\'s an easy to way to create and manage group conversations.</string>
+    <string name="overlay_later">Later</string>
+
+    <!-- Recording adjustments -->
+    <string name="recording_failed_adjusting">Recording failed, we\'re adjusting settings to your device. Please try again.</string>
+
+    <!-- Invitation -->
+    <string name="invitation_subject">I\'m talking with you on Roger</string>
+    <string name="invitation_message">Talk with me on Roger</string>
+    <string name="invitation_message_open_group">Talk with me on Roger</string>
+    <string name="invitation_send_email_chooser">I\'ve added you to %1$s conversation on the Roger app. Use this link to join it!</string>
+
+    <!-- OnBoarding -->
+    <string name="get_started_title">What\'s your number?</string>
+    <string name="get_started">get started</string>
+    <string name="button_confirm_number">confirm number</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="toggle_login_use_email">Or use an email address</string>
+    <string name="toggle_login_use_phone">Or a phone number</string>
+    <string name="wait_for_call">You should receive a call momentarily.</string>
+    <string name="wait_before_call">You must wait %1$s more seconds before requesting a phone call.</string>
+
+    <string name="ob_roger_slogan_part1" translatable="false">Roger.</string>
+    <string name="ob_roger_slogan_part2">| Talk more often</string>
+    <string name="ob_ready_question">Ready to start talking?</string>
+
+    <string name="verification_code_description">We sent you a code\nat %1$s.</string>
+    <string name="call_me_instead">CALL ME INSTEAD</string>
+
+    <!--Bots -->
+    <string name="bots_picker_title">Connect</string>
+    <string name="bots_lobby_title">Bots</string>
+    <string name="bots_ownership">%1$s\'s %2$s</string>
+
+    <!-- Primer -->
+    <string name="hello_primer">Hello %1$s,</string>
+    <string name="primer_subtitle">Ready to start your first conversation?</string>
+
+    <!-- Invitation Sheet -->
+    <string name="invite_conversation_element">Invite</string>
+    <string name="invite_title_cta">Invite %1$s to this conversation!</string>
+    <string name="invite_button">invite</string>
+    <string name="skip_button">skip</string>
+    <string name="no_more_invites">All done</string>
+    <string name="invite_all">Invite all your contacts</string>
+
+    <!-- Weather Screen -->
+    <string name="glimpses_intro_title">How\'s the weather?</string>
+    <string name="glimpses_enable">Show weather</string>
+    <string name="glimpses_intro_description">Display location, weather, and\nlocal time for conversations.</string>
+    <string name="glimpses_button">enable location</string>
+    <string name="glimpses_button_dismiss">Later</string>
+    <string name="glimpses_failed_to_update">Account update failed. Please try again.</string>
+    <string name="glimpses_permission_title">Location</string>
+    <string name="glimpses_permission_description">Roger needs to get access to your location from time to time</string>
+    <string name="glimpses_cloudy">Cloudy</string>
+    <string name="glimpses_fog">Fog</string>
+    <string name="glimpses_partly_cloudy">Partly cloudy</string>
+    <string name="glimpses_rain">Rain</string>
+    <string name="glimpses_sleet">Sleet</string>
+    <string name="glimpses_snow">Snow</string>
+    <string name="glimpses_wind">Wind</string>
+    <string name="glimpses_clear">Clear</string>
+    <string name="glimpses_night">Night</string>
+
+    <!-- OnBoarding errors -->
+    <string name="ob_failed_request">Failed request</string>
+    <string name="ob_wrong_code">That doesn\'t look like the code we sent</string>
+    <string name="ob_wrong_phone_number">That doesn\'t look like a phone number </string>
+    <string name="ob_phone_number_empty">Make sure you have a phone number</string>
+
+    <!-- Name Query -->
+    <string name="name_query_title">What\'s your name?</string>
+    <string name="name_query_desc">Make it easy for friends to find you.</string>
+    <string name="confirm_name">that\'s me</string>
+    <string name="contacts_title">Contacts</string>
+    <string name="contact_via">via</string>
+    <string name="contact_permission_title">Talk with your favorite people</string>
+    <string name="contact_permission_description">Access your contacts to get started.</string>
+
+    <!-- Invite after talking -->
+    <string name="invite_other_options">Other sharing options</string>
+    <string name="invite_send_button_label">send it</string>
+    <string name="invite_send_via_sms_button_label">send it via sms</string>
+    <!-- The \n in this sentence means new line, please keep it -->
+    <string name="invite_start_conversation_description">Invite %1$s \nto this conversation</string>
+    <string name="invite_start_conversation_sub">(They dont\'t need Roger to listen)</string>
+    <string name="invite_open_group_main">Invite link for \n%1$s conversation</string>
+
+    <!-- TalkHeads -->
+    <string name="th_tap_to_stop_recording">Tap to stop recording</string>
+    <string name="th_tap_to_start_recording">Double-Tap to start recording</string>
+    <string name="th_tap_to_play">Tap to play</string>
+    <string name="th_tap_to_stop">Tap to stop</string>
+    <string name="th_notification_title">TalkHeads are active</string>
+    <string name="th_notification_description">Press here to easily re-open Roger.</string>
+
+    <!-- Talk Screen -->
+    <string name="recent">Recent</string>
+    <string name="tap_to_play">tap here to listen</string>
+    <string name="people_button">People</string>
+    <string name="settings_button">Settings</string>
+    <string name="tooltip_mic_access">Allow microphone access</string>
+    <string name="tooltip_tap_finish_talking">Tap to finish talking</string>
+    <string name="tooltip_tap_talk">Tap to talk</string>
+    <string name="tooltip_tap_to_listen">Tap to listen</string>
+    <string name="tooltip_raise_to_listen">Tap to listen or raise to\near like a phone call</string>
+    <string name="contact_add_element">Add</string>
+    <string name="raise_to_listen_private">Raise to listen privately</string>
+    <string name="talk_screen_new_conversation">New Conversation</string>
+    <string name="talk_screen_live_playback_notice">Live Playback On</string>
+    <string name="talk_screen_speaking_with">Talking to %1$s</string>
+    <string name="talk_screen_speak_close">Speak close to the microphone</string>
+    <string name="talk_screen_conversations_label">Convos</string>
+    <string name="talk_screen_talk_label">Talk</string>
+    <string name="talk_screen_members_label">Members</string>
+    <string name="talk_screen_new_conversation_label">New</string>
+
+    <!-- Talk Screen - Audio Controls -->
+    <string name="talk_screen_rewind_label">Rewind</string>
+    <string name="talk_screen_speed_label">Speed</string>
+    <string name="talk_screen_skip_label">Skip</string>
+    <string name="talk_screen_share_label">Share</string>
+    <string name="talk_screen_buzz_label">Buzz</string>
+
+    <!-- Talk Screen - Contact options -->
+    <string name="error_cannot_hide_single_conversation">You cannot hide just one conversation.</string>
+    <string name="contact_options_set_name">Set Name</string>
+    <string name="contact_options_set_name_title">Set Conversation Name</string>
+    <string name="contact_options_share_profile">Share This Profile</string>
+    <string name="contact_options_share_profile_copy">Talk with %1$s on Roger</string>
+    <string name="contact_options_add_people">Add members</string>
+    <string name="contact_options_remove_people">remove</string>
+    <string name="contact_options_share_open_group">Invite People</string>
+    <string name="contact_options_more">More</string>
+    <string name="contact_options_mute_group">Mute</string>
+    <string name="contact_options_unmute_group">Unmute</string>
+    <string name="contact_options_leave_group">Leave Conversation</string>
+    <string name="contact_options_set_name_before_add_people">You must set a name for the conversation before adding people.</string>
+    <string name="contact_options_leave_group_title">Are you sure you want to leave %1$s?</string>
+    <string name="contact_options_mute_duration_8_hours">8 Hours</string>
+    <string name="contact_options_mute_duration_week">1 Week</string>
+    <string name="contact_options_pick_mute_duration_title">For how long do you wish to mute?</string>
+    <string name="contact_options_members">Members</string>
+    <string name="contact_options_start_talkhead">Start TalkHead</string>
+
+    <!-- Attachments -->
+    <string name="attachments_send_media_title">Send Media</string>
+    <string name="attachments_media_link_from_clipboard">Link from Clipboard</string>
+    <string name="attachments_photo">Photo</string>
+    <string name="attachments_clipboard_content">Clipboard contents:</string>
+    <string name="attachments_clipboard_empty">Your Clipboard is empty, type what you would like to share here instead:</string>
+
+    <!-- Contact Matching Screen -->
+    <string name="matching_explanation">You will be able to see which of your contacts are already on Roger, and invite the ones who aren\'t!</string>
+    <string name="matching_explanation_2">This verification will be fully encrypted and we won\'t spam, store or share your contacts in any way.</string>
+    <string name="matching_title">Access Contacts</string>
+    <string name="matching_ok">OK</string>
+    <string name="matching_cancel">Take me back</string>
+
+    <!-- Will read like "shared text - Copied to clipboard" -->
+    <string name="attachments_copied_to_clipboard">%1$s - Copied to clipboard.</string>
+
+    <!-- Talk Screen - Dialogs -->
+    <string name="change_stream_title_dialog_title">Set Name</string>
+    <string name="change_stream_name_hint">Name</string>
+    <string name="menu_option_create_conversation">Create Conversation</string>
+    <string name="menu_option_open_conversation">Join public conversations</string>
+
+    <!-- Talk Screen - Real-Time conversation Status -->
+    <string name="real_time_status_talking_to_you_single">talking right now</string>
+    <string name="real_time_status_talking_to_you_group">%1$s is talking right now</string>
+    <string name="real_time_status_listening_single">listening right now</string>
+    <string name="real_time_status_listening_group">%1$s is listening right now</string>
+    <string name="real_time_currently_listening_to">Listening to %1$s</string>
+
+    <!-- Talk Screen - Invitation options -->
+    <string name="invite_dialog_title">Share voice link</string>
+    <string name="invite_dialog_description_suffix">can listen with it.</string>
+    <string name="invite_talk_other_share_with">Share with</string>
+
+    <!-- Talk Screen - Card -->
+    <string name="avatar_card_title">Let\'s talk</string>
+    <string name="avatar_card_tap_mic_to_talk">Tap the microphone (below) and start talking.</string>
+
+    <!-- Group removal confirmation dialog -->
+    <string name="dialog_group_removal_title">Confirm</string>
+    <string name="dialog_group_removal_description">Are you sure you want to remove %1$s from this conversation?</string>
+
+    <!-- Contact search Screen -->
+    <string name="search_contact_menu_name">Name or Phone Number</string>
+    <string name="search_contact_menu_handle">Handle</string>
+    <string name="loading_contacts">Loading contacts…</string>
+    <string name="suggested_contacts">suggested</string>
+    <string name="device_contacts">add from contacts</string>
+    <string name="search_contact">search</string>
+    <string name="pick_your_first_conversation">Pick your first conversation</string>
+    <string name="contact_with">With:</string>
+    <string name="contact_add">Add:</string>
+    <string name="select_anyone">Select anyone (even non active users).</string>
+    <string name="new_conversation">New Conversation</string>
+    <string name="start_conversation">Start Conversation</string>
+    <string name="contacts_description">Pick anyone, even non active users.</string>
+    <string name="contacts_title_conversation">Conversation</string>
+    <string name="contacts_title_group">Conversation</string>
+    <string name="contacts_title_group_edit">Add Members</string>
+    <string name="contacts_secondary_description">They will be able to listen and reply.</string>
+    <string name="contacts_secondary_description_groups">They will be able to join your conversation.</string>
+    <string name="contacts_search_title">Search</string>
+
+    <!-- Handle/Username search screen -->
+    <string name="search_username_explanation">Your handle is \n %1$s</string>
+    <string name="search_display_name_explanation">Your display name is \n %1$s</string>
+
+    <!-- VoiceMail Related -->
+    <string name="voice_mail_title">Voicemail in Roger</string>
+    <string name="voice_mail_description_unset">We\'ll open your phone app with a pre-filled number that you must dial to link your voicemail to Roger.</string>
+    <string name="voice_mail_description_set">To disable voicemail, dial this number: %1$s</string>
+    <string name="voice_mail_description_unavailable">Sorry, we don\'t currently support your operator.</string>
+
+
+    <!-- Stream interaction text -->
+    <string name="stream_interaction_sent_not_listened">hasn\'t listened yet</string>
+    <string name="stream_interaction_sent_listened">listened %1$s</string>
+    <string name="stream_interaction_received">talked %1$s</string>
+
+    <!-- Time related -->
+    <string name="short_time_am">%1$s ᴀᴍ</string>
+    <string name="short_time_pm">%1$s ᴘᴍ</string>
+    <string name="long_time_now">just now</string>
+    <string name="long_time_recent_minute">a minute ago</string>
+    <string name="long_time_recent_minutes">a few minutes ago</string>
+    <string name="long_time_recent_half_hour">half an hour ago</string>
+    <string name="long_time_recent_hour">about an hour ago</string>
+    <string name="long_time_recent_hours">a few hours ago</string>
+    <string name="long_time_today_morning">this morning</string>
+    <string name="long_time_today_other">today around %1$s</string>
+    <string name="long_time_yesterday_morning">yesterday morning</string>
+    <string name="long_time_yesterday_evening">last night</string>
+    <string name="long_time_yesterday_other">yesterday around %1$s</string>
+    <string name="long_time_past_week">on %1$s</string>
+    <string name="long_time_other">on %1$s</string>
+
+    <!-- Notifications -->
+    <string name="notification_playing_title">Ongoing conversation</string>
+    <string name="notification_playing_description">Touch to return</string>
+    <string name="notification_recording_title">Recording in progress</string>
+    <string name="notification_recording_description">Touch to return</string>
+    <string name="notification_playing_stop_action">STOP</string>
+    <string name="notification_single_message_text">is talking to you…</string>
+    <string name="notification_single_message_to_group">is talking to %1$s</string>
+    <string name="notification_single_reminder_message_text">talked a while ago</string>
+    <string name="notification_people_title">%1$s people</string>
+    <string name="notification_buzz_description">buzzed you</string>
+    <string name="buzz_confirmation">Buzz sent</string>
+    <string name="notification_top_talker_title">​You\'re a Top Talker!</string>
+    <string name="notification_top_talker_description">You ranked #%1$s on Roger’s top talkers this week! #TalkMore</string>
+    <string name="share_text_top_talkers"> Ranked #%1$s on @helloRoger top talkers this week!</string>
+    <string name="talk_more_hash_tag">#TalkMore</string>
+    <string name="top_talker_dialog_description">Ranked #%1$s on Roger’s top talkers this week!</string>
+    <string name="share_top_talker_cta">SHARE</string>
+    <string name="user_just_added_you">%1$s started a conversation with you.</string>
+    <string name="user_no_name">A friend</string>
+    <string name="notification_added_you_to_group">%1$s added you to %2$s</string>
+    <string name="notification_viewing_attachment_single">%1$s saw the photo in %2$s</string>
+    <string name="notification_viewing_attachment_multiple_compact">%1$s people saw photos</string>
+
+    <!-- Pedro spoke to Roger Square -->
+    <string name="notification_multiple_title">%1$s spoke to %2$s</string>
+    <string name="notification_multiple_subtitle">These people spoke</string>
+    <string name="notification_multiple_title_you">you</string>
+    <string name="notification_multiple_title_you_expanded">you</string>
+    <string name="notification_multiple_description_element">Also spoke to you:</string>
+
+    <!-- Attachments -->
+    <string name="notification_sent_attachment_to">%1$s sent an attachment to %2$s</string>
+    <string name="notification_new_attachment_title">New Attachment!</string>
+    <string name="attachments_replace">share new</string>
+    <string name="attachments_empty">Share a photo or link with this conversation.\n Press the button below to do so.</string>
+
+    <!-- Permissions explanation -->
+    <string name="perm_start_permissions_title">Microphone, SMS and Contacts</string>
+    <string name="perm_start_permissions_description">These permissions are required for Roger to function properly.</string>
+    <string name="perm_audio_record_title">Microphone</string>
+    <string name="perm_audio_record_description">Audio Record permission is needed for Roger to function properly.</string>
+    <string name="perm_read_contact_title">Access Contact list</string>
+    <string name="perm_read_contact_description">Roger needs to access your contacts list to be able to display the people you can talk with. Your contacts will NOT be stored in our servers.</string>
+    <string name="perm_camera_title">Camera &amp; Storage</string>
+    <string name="perm_camera_description">Camera and Storage permissions are needed for Roger to take pictures.</string>
+    <string name="perm_storage_title">Storage</string>
+    <string name="perm_storage_description">Roger needs storage permission to access your gallery.</string>
+
+    <!-- Settings -->
+    <string name="feedback_title">feedback &amp; help</string>
+    <string name="your_account_title">Your account</string>
+    <string name="services_title">Services</string>
+    <string name="username_title">Handle</string>
+    <string name="settings_permissions_title">permissions</string>
+    <string name="settings_adding_accounts">Adding accounts helps friends find you.</string>
+    <string name="username_set_explanation_prefix">Friends can reach you at</string>
+    <string name="username_unset_explanation_prefix">Friends can reach you via your username.</string>
+    <string name="talk_with_us">Leave us a voice note</string>
+    <string name="email_us">Email us</string>
+    <string name="rate_us">Rate us on the Play Store</string>
+    <string name="copied_email">hello@rogertalk.com has been copied to your clipboard.</string>
+    <string name="copied_app_version">Roger version has been copied to your clipboard</string>
+    <string name="settings_send_email_chooser">Send e-mail with…</string>
+    <string name="settings_email_subject">Hello</string>
+    <string name="play_store_not_found">Sorry, we could not find Google\'s Play Store on your device</string>
+    <string name="settings_add_photo">ADD\nPHOTO</string>
+    <string name="settings_add_name">Add Name</string>
+    <string name="settings_add_username">Add username</string>
+    <string name="settings_add_additional_contact">Add additional contact info</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="error_name_cannot_be_black">Name cannot be blank</string>
+    <string name="error_username_cannot_be_black">Username cannot be blank</string>
+    <string name="photo_source_title">Choose photo from</string>
+    <string name="settings_add_phone">Add Phone Number</string>
+    <string name="settings_add_email">Add Email Address</string>
+    <string name="settings_add_contact_info_title">Contact Info</string>
+    <string name="settings_invite">Invite people to talk</string>
+    <string name="settings_invitation_text">Talk with me on Roger -</string>
+    <string name="settings_invitation_chooser">Invite via …</string>
+    <string name="settings_crop_button">save</string>
+    <string name="settings_username_invalid_chars_title">Invalid username</string>
+    <string name="settings_username_invalid_chars_description">Username must start with a letter followed by letters, numbers, or dashes.</string>
+    <string name="settings_username_invalid_taken_title">Already taken</string>
+    <string name="settings_username_conflict_description">Sorry, that username is unavailable.</string>
+    <string name="settings_upload_pic_failed">Failed, please try again.</string>
+    <string name="settings_glimpses_toggle">Weather</string>
+    <string name="settings_glimpses_description">Location, weather, and time for contacts.</string>
+    <string name="settings_contact_cta">Please note that Roger Support is a volunteer effort. We
+        try to respond as quickly as possible, but it may take a while.
+        \n\nPlease take a look at the Help page as it has important troubleshooting tips and answers to most questions.</string>
+
+    <!-- Settings - Live -->
+    <string name="settings_live_label">LivePlay</string>
+    <string name="settings_live_description">Auto play conversations</string>
+    <string name="settings_talkhead_label">TalkHeads</string>
+    <string name="settings_talkhead_description">Use Roger alongside other apps</string>
+
+    <!-- Settings - About -->
+    <string name="settings_about_header">about</string>
+    <string name="settings_whats_new">What\'s new</string>
+    <string name="settings_help">Help</string>
+    <string name="settings_faq">Frequently Asked Questions</string>
+    <string name="settings_credits">Credits</string>
+    <string name="settings_advanced">Advanced</string>
+
+    <!-- Settings Confirmation dialogs -->
+    <string name="settings_changed_username">Save your username?</string>
+    <string name="settings_changed_display_name">Save your display name?</string>
+
+    <!-- Add Contact Info -->
+    <string name="contact_info_email_title">What\'s your e-mail?</string>
+    <string name="contact_info_confirm_email">confirm e-mail</string>
+    <string name="contact_info_invalid_email">That doesn\'t look like an e-mail.</string>
+    <string name="contact_info_invalid_number">That doesn\'t look like a phone number.\n\nEg. +11235550122</string>
+    <string name="contact_info_invalid_button">Try again</string>
+    <string name="contact_info_invalid_title">Oops!</string>
+
+    <string name="challenge_request_failed_title">Uh oh!</string>
+    <string name="check_internet_connection_message">Please check your internet connection.</string>
+    <string name="create_stream_error_message">Could not start a conversation.</string>
+    <string name="add_by_username">Add by username</string>
+
+    <!-- Alexa -->
+    <string name="alexa_connect_page_title" translatable="false">Alexa</string>
+
+    <!-- Name Change -->
+    <string name="name_changed_successfully">Your name was updated</string>
+    <string name="error_failed_to_update_name">Failed to update name</string>
+    <string name="name_change_dialog_text">Do you want to update your profile picture?</string>
+    <string name="name_change_dialog_later">Later</string>
+
+    <!-- Suggested contacts -->
+    <string name="suggested_contact_roger_team_title">Roger Team</string>
+    <string name="suggested_contact_roger_team_description">Talk to a nice person on our team</string>
+
+    <!-- Change account -->
+    <string name="change_account_description">This is an existing account on Roger. Switch to that account?</string>
+
+    <!-- Landing Screen -->
+    <string name="landing_welcome_to_roger">Welcome to Roger</string>
+    <string name="landing_welcome_message">A free voice messenger for friends, families and teams who miss talking.</string>
+    <string name="landing_welcome_description">By continuing you agree to our Terms of Service</string>
+
+    <!-- Lobby -->
+    <string name="lobby_empty_conversation">Your conversation is empty, add members!</string>
+    <string name="lobby_waiting">Waiting for invited members to join</string>
+    <string name="lobby_add_members_via">add members via…</string>
+    <string name="lobby_address_book">Address Book</string>
+    <string name="lobby_handle">Handle</string>
+    <string name="lobby_bots_option">Bots</string>
+    <string name="lobby_group_share_link">Share Conversation Link</string>
+    <string name="lobby_invited_section">%1$s invited</string>
+    <string name="lobby_connected_bots">Already connected</string>
+    <string name="lobby_connect_new_bots">Connect bots</string>
+    <string name="lobby_connect_action">connect</string>
+    <string name="lobby_bot_section">Bots</string>
+    <string name="lobby_remind_action">remind</string>
+    <string name="error_could_not_remove_user">Error: Could not remove user. Please try again!</string>
+    <string name="lobby_conversation_not_ready">Conversations need at least one other active member. Have you tried adding someone?</string>
+    <string name="error_could_not_match_users">There was an issue in the matching mechanism of the users of selected.</string>
+    <string name="lobby_sent_feedback">Sent</string>
+
+    <!-- read as "John Conversation" -->
+    <string name="lobby_conversation_title_default">%1$s Conversation</string>
+
+    <!-- Lobby screen contact options -->
+    <string name="lobby_option_block">Block</string>
+    <string name="lobby_option_remove">Remove from Conversation</string>
+    <string name="lobby_option_share">Share Profile</string>
+    <string name="lobby_option_start_conversation">Start a New Conversation</string>
+
+    <!-- Placeholders -->
+    <string name="placeholder_family">Family</string>
+    <string name="placeholder_friends">Friends</string>
+    <string name="placeholder_team">Team</string>
+
+    <!-- Audio Expiration -->
+    <string name="audio_expiration_notification">Psst…%1$s talked to you yesterday. Listen before it expires!</string>
+    <string name="audio_expiration_notification_title">Audio expiring</string>
+
+</resources>

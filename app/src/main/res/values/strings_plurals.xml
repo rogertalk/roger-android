@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <plurals name="days">
+        <item quantity="one">day</item>
+        <item quantity="other">days</item>
+    </plurals>
+
+    <plurals name="minutes">
+        <item quantity="one">minute</item>
+        <item quantity="other">minutes</item>
+    </plurals>
+
+    <plurals name="hours">
+        <item quantity="one">hour</item>
+        <item quantity="other">hours</item>
+    </plurals>
+
+    <plurals name="second">
+        <item quantity="one">second</item>
+        <item quantity="other">seconds</item>
+    </plurals>
+
+    <plurals name="member">
+        <item quantity="one">member</item>
+        <item quantity="other">members</item>
+    </plurals>
+
+    <plurals name="notification_people_talked">
+        <item quantity="one">1 more person spoke to you as well</item>
+        <item quantity="other">%1$s more people spoke to you as well</item>
+    </plurals>
+
+</resources>

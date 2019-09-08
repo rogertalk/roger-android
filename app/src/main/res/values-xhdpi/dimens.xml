@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Couple of common sizes that appear throughout various screens -->
+
+    <dimen name="default_side_padding">16dp</dimen>
+    <dimen name="on_boarding_side_padding">27dp</dimen>
+    <dimen name="drawable_default_padding">4dp</dimen>
+
+    <!-- Elevation Levels -->
+    <dimen name="elevation_l1">4dp</dimen>
+
+    <dimen name="contact_circle_diameter">70dp</dimen>
+    <dimen name="contact_circle_diameter_outer">78dp</dimen>
+    <dimen name="contact_screen_avatar_circle_diameter">36dp</dimen>
+    <dimen name="contact_big_circle_diameter">100dp</dimen>
+    <dimen name="contact_biggest_circle_diameter">120dp</dimen>
+    <dimen name="contact_biggest_circle_diameter_outer">128dp</dimen>
+    <dimen name="playback_visualizer_diameter">140dp</dimen>
+    <dimen name="contact_biggest_circle_diameter_shadow">142dp</dimen>
+    <dimen name="contact_biggest_circle_diameter_shadow_half">71dp</dimen>
+    <dimen name="ribbon_participant_diameter">35dp</dimen>
+    <dimen name="ribbon_participant_shift">29dp</dimen>
+
+    <!-- Talk Screen -->
+    <dimen name="vertical_padding_contacts">4dp</dimen>
+    <dimen name="navigation_contact_diameter">26dp</dimen>
+    <dimen name="conversations_list_height">80dp</dimen>
+    <dimen name="conversations_area_height">178dp</dimen>
+    <dimen name="audio_control_diameter">54dp</dimen>
+    <dimen name="talk_screen_controls_bottom_margin">100dp</dimen>
+
+    <!-- OnBoarding -->
+    <dimen name="on_boarding_header_height">260dp</dimen>
+    <dimen name="on_boarding_padding_title_desc">8dp</dimen>
+    <dimen name="circle_progress_radius">32dp</dimen>
+
+    <!-- Settings -->
+    <dimen name="settings_header_height">200dp</dimen>
+    <dimen name="settings_header_min_height">60dp</dimen>
+    <dimen name="settings_photo_diameter">68dp</dimen>
+    <dimen name="settings_photo_inner_diameter">66dp</dimen>
+    <dimen name="settings_header_height_translate_threshold">83dp</dimen>
+
+    <!-- Contacts / People -->
+    <dimen name="contacts_search_collapsed_size">43dp</dimen>
+    <dimen name="contacts_search_expanded_size">86dp</dimen>
+
+    <!--Chips -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="mic_shadow_bottom_margin">128dp</dimen>
+
+    <!-- Realm Explorer -->
+    <dimen name="cell_heading_text_size">12sp</dimen>
+    <dimen name="cell_text_size">10sp</dimen>
+    <dimen name="cell_padding">5dp</dimen>
+
+</resources>

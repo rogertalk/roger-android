@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/LayoutSidePadding.OnBoarding"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/day_background"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/titleLabel"
+        style="@style/OnBoardingText.Font1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/matching_title"
+        app:layout_marginTopPercent="10%"
+        android:textColor="@color/opaque_white" />
+
+    <ImageView
+        android:id="@+id/previewImage"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/titleLabel"
+        app:layout_marginTopPercent="10%"
+        android:layout_centerHorizontal="true"
+        android:importantForAccessibility="no"
+        android:src="@drawable/active_contact_preview" />
+
+
+    <TextView
+        android:id="@+id/messageLabel"
+        style="@style/StyleGuideText.SubHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/previewImage"
+        app:layout_marginTopPercent="2%"
+        app:layout_widthPercent="80%"
+        android:maxLines="20"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="@string/matching_explanation"
+        android:textColor="@color/opaque_white" />
+
+    <TextView
+        android:id="@+id/messageLabel2"
+        style="@style/StyleGuideText.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/messageLabel"
+        app:layout_widthPercent="80%"
+        android:layout_marginTop="2dp"
+        android:maxLines="20"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="@string/matching_explanation_2"
+        android:textColor="@color/opaque_white" />
+
+
+    <com.rogertalk.roger.ui.view.BlueButton
+        android:id="@+id/givePermissionButton"
+        style="@style/OnBoardingButton.WhiteBlueText"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/on_boarding_button_height"
+        android:layout_below="@id/messageLabel2"
+        app:layout_marginTopPercent="10%"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/matching_ok"
+        android:theme="@style/OnBoardingButton.WhiteBlueText" />
+
+
+    <!-- Terms and Services -->
+
+    <TextView
+        android:id="@+id/doNotGivePermissionButton"
+        style="@style/OnBoardingText.Font3.B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_marginTopPercent="2%"
+        android:layout_below="@id/givePermissionButton"
+        android:text="@string/matching_cancel"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:textColor="@color/white_80"
+        android:textSize="@dimen/font_s" />
+
+
+</android.support.percent.PercentRelativeLayout>

@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.rogertalk.roger"
+    android:installLocation="auto">
+
+    <!-- Make sure we don't require phone-specific features -->
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false"
+        tools:node="strict" />
+
+    <!-- Draw floating UI -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- To re-register GCM upon boot -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- Change to loudspeaker and play trough bluetooth -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- Android Beam support -->
+    <uses-permission android:name="android.permission.NFC" />
+
+    <!-- Get user name -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+
+    <!-- Info about the currently active connection -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Get user Phone number on API 22 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- Generic Use -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Record Audio Support -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- Read local contacts -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- Read SMS Contents -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+    <!-- Pick pictures -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- Location for Glimpses -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- GCM -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.rogertalk.roger.permission.C2D_MESSAGE" />
+
+    <permission
+        android:name="com.rogertalk.roger.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <application
+        android:name=".android.AppController"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme.Base.Fullscreen"
+        tools:replace="android:allowBackup, android:supportsRtl">
+
+        <activity
+            android:name=".ui.screens.LandingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Base.Fullscreen">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".ui.screens.AddContactInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Base.Windowed"
+            android:windowSoftInputMode="adjustResize|stateVisible|stateAlwaysVisible" />
+
+        <activity
+            android:name=".ui.screens.TalkActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/com.rogertalk.roger" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.screens.ContactsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|stateAlwaysVisible" />
+
+        <activity
+            android:name=".ui.screens.ValidationActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme.Base.Windowed"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateVisible|stateAlwaysVisible" />
+
+        <activity
+            android:name=".ui.screens.NameSetupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Base.Windowed"
+            android:windowSoftInputMode="adjustResize|stateVisible|stateAlwaysVisible" />
+
+        <activity
+            android:name=".ui.screens.WeatherEnableActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.screens.SMSHandleActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="rgr.im"
+                    android:scheme="http" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".ui.screens.URLHandlerActivity"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="rogertalk" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.screens.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Base.Fullscreen"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".ui.screens.ImageCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Base.Windowed" />
+
+        <activity
+            android:name=".ui.screens.AlexaConnectScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Base.Windowed" />
+
+        <activity
+            android:name=".ui.screens.BotConnectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Base.Windowed" />
+
+        <activity
+            android:name=".ui.screens.WhatsNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Base.Fullscreen" />
+
+        <activity
+            android:name=".ui.screens.InviteActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Base.Fullscreen" />
+
+        <activity
+            android:name=".ui.screens.BotPickActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Base.Fullscreen" />
+
+        <activity
+            android:name=".ui.screens.BotLobbyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Base.Fullscreen" />
+
+        <activity
+            android:name=".ui.screens.LobbyActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.Base.Fullscreen" />
+
+        <activity
+            android:name=".ui.screens.AttachmentsActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.Base.Fullscreen" />
+
+        <activity
+            android:name=".ui.screens.MatchPermissionsActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.Base.Fullscreen" />
+
+        <activity
+            android:name=".ui.screens.AdvancedOptionsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Base.Windowed" />
+
+
+        <!-- IFTTT Deep Link -->
+
+        <activity android:name=".ui.screens.IFTTTDeepLinkActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="rogerbot" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- Realm Explorer -->
+        <activity
+            android:name=".realm.explorer.DisplayModelActivity"
+            android:theme="@style/AppTheme.Base.Windowed" />
+
+        <activity
+            android:name=".realm.explorer.ModelSelectionActivity"
+            android:theme="@style/AppTheme.Base.Windowed" />
+
+        <!-- GCM Related -->
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.rogertalk.roger" />
+            </intent-filter>
+        </receiver>
+
+        <!-- GCM -->
+        <service
+            android:name=".android.services.RogerGcmListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".android.services.RogerInstanceIdListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".android.services.RegisterDeviceIntentService"
+            android:exported="false" />
+
+        <!-- Other Services -->
+
+        <service
+            android:name=".android.services.talkhead.FloatingRogerService"
+            android:exported="true"
+            android:enabled="true" />
+
+        <service
+            android:name=".android.services.AudioService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".android.services.NotificationsService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".android.services.GlimpsesService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- Receivers -->
+        <receiver
+            android:name=".android.receivers.ConnectivityReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".android.receivers.SmsReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".android.receivers.NotificationsReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.rogertalk.roger.receiver.DISMISS_UNPLAYED_NOTIFICATIONS" />
+                <action android:name="com.rogertalk.roger.receiver.DISMISS_BUZZ_NOTIFICATIONS" />
+                <action android:name="com.rogertalk.roger.receiver.STOP_PLAYING_NOTIFICATIONS" />
+                <action android:name="com.rogertalk.roger.receiver.STOP_RECORDING_NOTIFICATIONS" />
+                <action android:name="com.rogertalk.roger.receiver.DISMISSED_VIEWING_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".android.receivers.MediaKeysReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".android.receivers.HeadphonesStateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.HEADSET_PLUG" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".android.receivers.PendingNotificationReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.rogertalk.roger.receiver.SHOW_PENDING_NOTIFICATION" />
+                <action android:name="com.rogertalk.roger.receiver.AUDIO_EXPIRATION_NOTIFICATION" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".android.receivers.UpdateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <data
+                    android:path="com.rogertalk.roger"
+                    android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".android.receivers.BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Referrer info and other metadata that we can use for deep-linking -->
+        <receiver
+            android:name=".android.receivers.ReferrerReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <!-- PROVIDERS -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.rogertalk.roger.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/paths" />
+        </provider>
+
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="_REMOVED_" />
+    </application>
+
+</manifest>

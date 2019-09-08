@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentScroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/opaque_white">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/snackbarPosition"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <RelativeLayout
+            android:id="@+id/rel_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.rogertalk.roger.ui.view.RelativeLayoutWithInverseBehavior">
+
+            <LinearLayout
+                style="@style/LayoutSidePadding.OnBoarding"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/opaque_white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleText"
+                    style="@style/OnBoardingText.Font1.A"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="47dp"
+                    android:text="@string/verification_code_description" />
+
+
+                <!-- TODO : This EditText doesn't render line properly on API < 21 -->
+                <EditText
+                    android:id="@+id/codeField"
+                    style="@style/OnBoardingEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/default_side_padding"
+                    android:layout_marginRight="@dimen/default_side_padding"
+                    android:layout_marginTop="30dp"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:labelFor="@id/titleText"
+                    android:maxLength="3"
+                    android:nextFocusForward="@+id/confirmNameButton"
+                    android:textSize="@dimen/font_xl"
+                    android:theme="@style/OnBoardingEditText"
+                    tools:text="123" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp">
+
+                    <com.rogertalk.roger.ui.view.BlueButton
+                        android:id="@+id/confirmNameButton"
+                        style="@style/OnBoardingButton.Blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/on_boarding_button_height"
+                        android:text="@android:string/ok"
+                        android:theme="@style/OnBoardingButton.Blue" />
+
+                    <com.pnikosis.materialishprogress.ProgressWheel
+                        android:id="@+id/progressWheel"
+                        style="@style/OnBoardingCircleProgress.White"
+                        android:layout_width="@dimen/circle_progress_radius"
+                        android:layout_height="@dimen/circle_progress_radius"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/callMeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginBottom="10dp"
+                    android:padding="5dp"
+                    android:text="@string/call_me_instead"
+                    android:textColor="@color/button_blue"
+                    android:textSize="@dimen/font_s" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+</ScrollView>

@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/settings_header_height"
+    android:orientation="vertical">
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/invitePeople"
+        style="@style/SettingsElementLayout.Ripple"
+        android:layout_height="60dp">
+
+        <TextView
+            android:layout_gravity="center"
+            style="@style/SettingsInnerTextElement"
+            android:textColor="@color/button_blue"
+            android:text="@string/settings_invite"/>
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+
+    <!-- Username Header -->
+
+    <TextView
+        style="@style/SettingsHeaderElement"
+        android:text="@string/username_title" />
+
+    <LinearLayout
+        android:id="@+id/addUsername"
+        style="@style/SettingsElementLayout">
+
+        <EditText
+            android:id="@+id/usernameEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:longClickable="false"
+            android:imeOptions="actionDone"
+            android:inputType="textNoSuggestions"
+            android:textColorHint="@color/s_light_grey"
+            android:maxLength="20"
+            android:hint="@string/settings_add_username"
+            android:background="@null"
+            android:textSize="@dimen/font_body" />
+
+    </LinearLayout>
+
+    <!-- Username explanation -->
+
+    <TextView
+        android:id="@+id/reachUserLabel"
+        style="@style/SettingsBottomInfoElement"
+        android:text="@string/username_unset_explanation_prefix" />
+
+    <!-- Services Header -->
+
+    <TextView
+        android:id="@+id/servicesTitle"
+        style="@style/SettingsHeaderElement"
+        android:text="@string/services_title" />
+
+    <LinearLayout
+        android:id="@+id/servicesContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+
+    <!-- Account Header -->
+
+    <TextView
+        style="@style/SettingsHeaderElement"
+        android:text="@string/your_account_title"/>
+
+    <LinearLayout
+        android:id="@+id/accountInfoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/addAccountInfo"
+        style="@style/SettingsElementLayout.Ripple"
+        app:mrl_rippleDelayClick="false">
+
+        <TextView
+            style="@style/SettingsInnerTextElement"
+            android:textColor="@color/s_light_grey"
+            android:text="@string/settings_add_additional_contact"/>
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <!-- Add account explanation -->
+
+    <TextView
+        style="@style/SettingsBottomInfoElement"
+        android:text="@string/settings_adding_accounts"/>
+
+
+    <!-- Weather Toggle -->
+    <TextView
+        style="@style/SettingsHeaderElement"
+        android:text="@string/settings_permissions_title" />
+
+    <RelativeLayout style="@style/SettingsElementLayout">
+
+        <TextView
+            style="@style/SettingsInnerTextElement"
+            android:text="@string/settings_glimpses_toggle" />
+
+        <Switch
+            android:id="@+id/weatherToggle"
+            android:layout_alignParentRight="true"
+            android:checked="false"
+            android:textOn="ON"
+            android:textOff="OFF"
+            android:contentDescription="@string/settings_glimpses_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            style="@style/SettingsInnerTextElement"
+            android:layout_width="match_parent"
+            android:textColor="@color/s_light_grey"
+            android:textSize="@dimen/font_caption"
+            android:gravity="left"
+            android:maxLines="2"
+            android:layout_marginTop="18dp"
+            android:layout_toLeftOf="@id/weatherToggle"
+            android:text="@string/settings_glimpses_description" />
+
+
+    </RelativeLayout>
+
+
+    <!-- Live / Autoplay -->
+
+    <RelativeLayout style="@style/SettingsElementLayout">
+
+        <TextView
+            style="@style/SettingsInnerTextElement"
+            android:text="@string/settings_live_label" />
+
+        <Switch
+            android:id="@+id/liveToggle"
+            android:layout_alignParentRight="true"
+            android:checked="false"
+            android:textOn="ON"
+            android:textOff="OFF"
+            android:contentDescription="@string/settings_live_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            style="@style/SettingsInnerTextElement"
+            android:layout_width="match_parent"
+            android:textColor="@color/s_light_grey"
+            android:textSize="@dimen/font_caption"
+            android:gravity="left"
+            android:maxLines="2"
+            android:layout_marginTop="18dp"
+            android:layout_toLeftOf="@id/liveToggle"
+            android:text="@string/settings_live_description" />
+
+    </RelativeLayout>
+
+    <!-- TalkHeads -->
+
+    <RelativeLayout
+        android:id="@+id/talkHeadSection"
+        style="@style/SettingsElementLayout">
+
+        <TextView
+            style="@style/SettingsInnerTextElement"
+            android:text="@string/settings_talkhead_label" />
+
+        <Switch
+            android:id="@+id/talkHeadToggle"
+            android:layout_alignParentRight="true"
+            android:checked="false"
+            android:textOn="ON"
+            android:textOff="OFF"
+            android:contentDescription="@string/settings_talkhead_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            style="@style/SettingsInnerTextElement"
+            android:layout_width="match_parent"
+            android:textColor="@color/s_light_grey"
+            android:textSize="@dimen/font_caption"
+            android:gravity="left"
+            android:maxLines="2"
+            android:layout_marginTop="18dp"
+            android:layout_toLeftOf="@id/talkHeadToggle"
+            android:text="@string/settings_talkhead_description" />
+
+
+    </RelativeLayout>
+
+
+    <!-- FEEDBACK -->
+
+    <TextView
+        style="@style/SettingsHeaderElement"
+        android:text="@string/feedback_title"/>
+
+    <!-- FAQ -->
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/faq"
+        style="@style/SettingsElementLayout.Ripple">
+
+        <TextView
+            style="@style/SettingsInnerTextElement"
+            android:drawableLeft="@drawable/ic_info"
+            android:drawablePadding="6dp"
+            android:text="@string/settings_faq" />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <View style="@style/HorizontalSeparator"/>
+
+    <!-- Email Us -->
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/emailUs"
+        style="@style/SettingsElementLayout.Ripple">
+
+        <TextView
+            style="@style/SettingsInnerTextElement"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawablePadding="6dp"
+            android:text="@string/email_us"/>
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <View style="@style/HorizontalSeparator" />
+
+    <!-- Rate Us -->
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/rateUs"
+        style="@style/SettingsElementLayout.Ripple">
+
+        <TextView
+            style="@style/SettingsInnerTextElement"
+            android:drawableLeft="@drawable/ic_star"
+            android:drawablePadding="6dp"
+            android:text="@string/rate_us"/>
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+
+    <!-- ABOUT -->
+
+    <TextView
+        style="@style/SettingsHeaderElement"
+        android:text="@string/settings_about_header" />
+
+    <!--What's New -->
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/whatsNewButton"
+        android:contentDescription="@string/settings_whats_new"
+        android:importantForAccessibility="yes"
+        style="@style/SettingsElementLayout.Ripple">
+
+        <TextView
+            style="@style/SettingsInnerTextElement"
+            android:text="@string/settings_whats_new" />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <View style="@style/HorizontalSeparator" />
+
+    <!-- Credits -->
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/creditsButton"
+        android:contentDescription="@string/settings_credits"
+        style="@style/SettingsElementLayout.Ripple">
+
+        <TextView
+            style="@style/SettingsInnerTextElement"
+            android:text="@string/settings_credits" />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <View style="@style/HorizontalSeparator" />
+
+    <!-- Advanced -->
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/advancedButton"
+        android:visibility="gone"
+        android:contentDescription="@string/settings_advanced"
+        style="@style/SettingsElementLayout.Ripple">
+
+        <TextView
+            style="@style/SettingsInnerTextElement"
+            android:text="@string/settings_advanced" />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+
+    <!--APP VERSION FOOTER -->
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/appVersion"
+        style="@style/SettingsElementLayout.Ripple"
+        android:layout_height="60dp"
+        android:background="@color/s_accent_grey_2">
+
+        <TextView
+            android:id="@+id/appVersionLabel"
+            style="@style/SettingsInnerTextElement"
+            android:layout_gravity="center"
+            android:text="@string/settings_invite" />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+</LinearLayout>

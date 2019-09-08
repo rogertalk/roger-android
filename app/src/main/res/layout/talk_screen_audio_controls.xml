@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@color/opaque_black">
+    <!-- tools:showIn="@layout/talk_screen" -->
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <!-- Rewind button -->
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rewindContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/ac_replay_last"
+                android:focusable="true"
+                android:importantForAccessibility="yes"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="@dimen/audio_control_diameter"
+                    android:layout_height="@dimen/audio_control_diameter"
+                    android:importantForAccessibility="no"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/circumference_white" />
+
+                <com.mikepenz.iconics.view.IconicsTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="{gmd-replay}"
+                    android:textColor="@color/white_80"
+                    android:textSize="@dimen/font_xl"
+                    tools:text="o"
+                    tools:ignore="HardcodedText" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_m"
+                android:textColor="@color/white_80"
+                android:importantForAccessibility="no"
+                android:text="@string/talk_screen_rewind_label" />
+
+        </LinearLayout>
+
+        <!--Playback Speed -->
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+            android:id="@+id/playbackSpeedControl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:importantForAccessibility="yes"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="@dimen/audio_control_diameter"
+                android:layout_height="@dimen/audio_control_diameter"
+                android:importantForAccessibility="no"
+                android:layout_centerInParent="true"
+                android:src="@drawable/circumference_white" />
+
+            <TextView
+                android:id="@+id/speedLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="1x"
+                android:textColor="@color/white_80"
+                android:textSize="@dimen/font_xl"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+            <TextView
+                android:id="@+id/speedLabelBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_m"
+                android:textColor="@color/white_80"
+                android:importantForAccessibility="no"
+                android:text="@string/talk_screen_speed_label" />
+
+        </LinearLayout>
+
+        <!-- Skip Button -->
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+            android:id="@+id/skipContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="@string/ac_skip"
+            android:focusable="true"
+            android:importantForAccessibility="yes"
+            android:padding="5dp"
+            tools:ignore="RtlHardcoded">
+
+            <ImageView
+                android:layout_width="@dimen/audio_control_diameter"
+                android:layout_height="@dimen/audio_control_diameter"
+                android:importantForAccessibility="no"
+                android:layout_centerInParent="true"
+                android:src="@drawable/circumference_white" />
+
+            <com.mikepenz.iconics.view.IconicsTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="{gmd-skip-next}"
+                android:textColor="@color/white_80"
+                android:textSize="@dimen/font_xl"
+                tools:text=">"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_m"
+                android:textColor="@color/white_80"
+                android:importantForAccessibility="no"
+                android:text="@string/talk_screen_skip_label" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

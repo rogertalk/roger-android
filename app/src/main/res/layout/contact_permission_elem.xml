@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/top_elem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/opaque_white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/default_side_padding">
+
+    <RelativeLayout
+        android:id="@+id/relIcon"
+        android:layout_width="@dimen/contact_screen_avatar_circle_diameter"
+        android:layout_height="@dimen/contact_screen_avatar_circle_diameter"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/contact_screen_avatar_circle_diameter"
+            android:layout_height="@dimen/contact_screen_avatar_circle_diameter"
+            android:importantForAccessibility="no"
+            android:src="@drawable/contact_grey_circle" />
+
+        <LinearLayout
+            android:layout_width="@dimen/contact_screen_avatar_circle_diameter"
+            android:layout_height="@dimen/contact_screen_avatar_circle_diameter"
+            android:gravity="center">
+
+            <com.mikepenz.iconics.view.IconicsTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="{gmd-contacts}"
+                android:textColor="@color/s_medium_grey"
+                android:textSize="@dimen/font_l"
+                tools:ignore="HardcodedText"
+                tools:text="OK" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_toRightOf="@id/relIcon"
+        android:orientation="vertical"
+        tools:ignore="RtlHardcoded">
+
+        <TextView
+            style="@style/StyleGuideText.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:text="@string/contact_permission_title"
+            android:textColor="@color/s_dark_grey"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            style="@style/StyleGuideText.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="2"
+            android:text="@string/contact_permission_description"
+            android:textColor="@color/s_light_grey"
+            tools:ignore="RtlHardcoded" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/askContactPermissionButton"
+        style="@style/OnBoardingButton.Blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="0dp"
+        android:text="@android:string/ok"
+        android:theme="@style/OnBoardingButton.Blue"
+        tools:ignore="RelativeOverlap" />
+
+</RelativeLayout>

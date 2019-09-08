@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- OnBoarding -->
+    <dimen name="on_boarding_contact_side">135dp</dimen>
+    <dimen name="on_boarding_button_height">60dp</dimen>
+    <dimen name="on_boarding_indicator_radius">5dp</dimen>
+
+    <dimen name="mic_shadow_bottom_margin">130dp</dimen>
+
+</resources>

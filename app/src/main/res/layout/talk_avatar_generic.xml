@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/talk_screen">
+
+    <!-- Temporary Rollback button -->
+
+    <ImageView
+        android:id="@+id/listeningCircleFeedback"
+        android:layout_width="@dimen/contact_biggest_circle_diameter"
+        android:layout_height="@dimen/contact_biggest_circle_diameter"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:importantForAccessibility="no"
+        android:src="@drawable/circumference_60_white" />
+
+    <!-- Avatar Play -->
+
+    <ImageView
+        android:id="@+id/avatarContainerShadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/player_shadow"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/playbackVisualizer"
+        android:layout_width="@dimen/playback_visualizer_diameter"
+        android:layout_height="@dimen/playback_visualizer_diameter"
+        android:layout_centerInParent="true"
+        android:importantForAccessibility="no"
+        android:background="@drawable/audio_feedback_circle" />
+
+    <RelativeLayout
+        android:id="@+id/avatarContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:importantForAccessibility="yes"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/userProfileImage"
+            android:layout_width="@dimen/contact_biggest_circle_diameter"
+            android:layout_height="@dimen/contact_biggest_circle_diameter"
+            android:transitionName="profile_image"
+            android:importantForAccessibility="no"
+            android:src="@drawable/pee"
+            tools:targetApi="lollipop" />
+
+    </RelativeLayout>
+
+    <!-- Name and description -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-14dp"
+        android:layout_below="@id/avatarContainer">
+
+        <!-- Title and Status + Accessibility group -->
+        <RelativeLayout
+            android:id="@+id/userTitleAccessibility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="yes">
+
+            <TextView
+                android:id="@+id/userTitleLabel"
+                style="@style/WhiteText.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="@dimen/default_side_padding"
+                android:layout_marginRight="@dimen/default_side_padding"
+                android:importantForAccessibility="no"
+                android:textSize="26sp"
+                tools:text="Roger Smith" />
+
+            <TextView
+                android:id="@+id/statusMsgLabel"
+                style="@style/WhiteText.Status.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userTitleLabel"
+                android:layout_marginLeft="@dimen/default_side_padding"
+                android:layout_marginRight="@dimen/default_side_padding"
+                android:importantForAccessibility="no"
+                android:textSize="@dimen/font_s"
+                tools:text="@string/lorem_ipsum"
+                tools:targetApi="kitkat" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- Badge -->
+    <LinearLayout
+        android:id="@+id/unplayedContainer"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/avatarContainer"
+        android:layout_alignEnd="@+id/avatarContainer"
+        android:layout_alignRight="@+id/avatarContainer"
+        android:background="@drawable/circle_red"
+        android:alpha="0"
+        tools:alpha="1"
+        android:importantForAccessibility="no"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/unplayedTimeLabel"
+            style="@style/WhiteText.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:ellipsize="none"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:textSize="@dimen/font_l"
+            android:importantForAccessibility="no"
+            tools:text="0"
+            tools:targetApi="jelly_bean_mr1" />
+
+    </LinearLayout>
+
+</RelativeLayout>

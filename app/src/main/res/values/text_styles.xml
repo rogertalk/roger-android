@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Style-guide text styles -->
+    <style name="StyleGuideText">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="StyleGuideText.Headline">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="StyleGuideText.Title">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="StyleGuideText.SubHeader">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="StyleGuideText.Body1">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="StyleGuideText.Caps">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="StyleGuideText.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+    <style name="WhiteText">
+        <item name="android:textColor">@color/opaque_white</item>
+        <item name="android:textSize">@dimen/font_m</item>
+        <item name="android:drawablePadding">@dimen/drawable_default_padding</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="WhiteText.Status">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/white_60</item>
+        <item name="android:textSize">@dimen/font_xl</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="WhiteText.Status.Icon">
+        <item name="android:textSize">9sp</item>
+    </style>
+
+    <style name="WhiteText.Status.Small">
+        <item name="android:textSize">@dimen/font_m</item>
+    </style>
+
+    <style name="WhiteText.Status.Smaller">
+        <item name="android:textSize">@dimen/font_xs</item>
+    </style>
+
+    <style name="WhiteText.Title">
+        <item name="android:textColor">@color/opaque_white</item>
+        <item name="android:textSize">@dimen/font_xxxl</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="OnBoardingText" parent="WhiteText">
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="OnBoardingText.Font1">
+        <item name="android:textSize">@dimen/on_boarding_font1</item>
+    </style>
+
+    <style name="OnBoardingText.Font2">
+        <item name="android:textSize">@dimen/on_boarding_font2</item>
+    </style>
+
+    <style name="OnBoardingText.Font3">
+        <item name="android:textSize">@dimen/on_boarding_font2</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/white_60</item>
+    </style>
+
+    <style name="OnBoardingText.Font3.A">
+        <item name="android:textColor">@color/light_grey</item>
+    </style>
+
+    <!-- New OnBoarding -->
+    <style name="OnBoardingText.FontSlogan">
+        <item name="android:textSize">@dimen/font_l</item>
+    </style>
+
+    <style name="OnBoardingText.Font1.A">
+        <item name="android:textColor">@color/ob_medium_grey</item>
+    </style>
+
+    <style name="OnBoardingText.Font2.A">
+        <item name="android:textColor">@color/ob_medium_grey</item>
+    </style>
+
+    <style name="OnBoardingText.Font3.B">
+        <item name="android:textColor">@color/ob_light_grey</item>
+    </style>
+
+</resources>

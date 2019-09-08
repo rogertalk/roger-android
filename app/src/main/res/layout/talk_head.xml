@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/headContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:importantForAccessibility="noHideDescendants"
+    android:layout_margin="2dp">
+
+    <com.rogertalk.roger.ui.view.PlayerVisualizer
+        android:id="@+id/playerVisualizer"
+        android:layout_width="90dp"
+        android:layout_height="90dp" />
+
+    <!-- Shadow -->
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/player_shadow" />
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/outerCircle"
+            android:layout_width="@dimen/contact_circle_diameter_outer"
+            android:layout_height="@dimen/contact_circle_diameter_outer"
+            android:layout_centerInParent="true"
+            android:src="@drawable/circle_black" />
+
+
+        <ImageView
+            android:id="@+id/contactPhoto"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/avatarBorder"
+            android:layout_width="@dimen/contact_circle_diameter_outer"
+            android:layout_height="@dimen/contact_circle_diameter_outer"
+            android:layout_centerInParent="true"
+            android:src="@drawable/circumference_white_thin" />
+
+        <TextView
+            android:id="@+id/conversationTitle"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:fontFamily="sans-serif"
+            android:importantForAccessibility="no"
+            android:textAllCaps="true"
+            android:textColor="@color/opaque_white"
+            android:textSize="@dimen/font_m"
+            tools:text="P" />
+
+
+        <!-- An overlay to place above contact photo when displaying other UI -->
+        <ImageView
+            android:id="@+id/topOverlay"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/circle_black_60"
+            android:visibility="visible" />
+
+        <!-- Playing -->
+
+        <TextView
+            android:id="@+id/playbackCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="sans-serif"
+            android:importantForAccessibility="no"
+            android:textAllCaps="true"
+            android:textColor="@color/opaque_white"
+            android:textSize="@dimen/font_xxxl"
+            tools:text="99" />
+
+
+        <!-- Blue Dot -->
+
+        <ImageView
+            android:id="@+id/dotBorder"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignBottom="@id/outerCircle"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="56dp"
+            android:src="@drawable/unplayed_dot_border" />
+
+        <ImageView
+            android:id="@+id/dot"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignBottom="@id/outerCircle"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="59dp"
+            android:src="@drawable/unplayed_dot_red" />
+
+
+        <!-- Recording -->
+
+        <ImageView
+            android:id="@+id/recordingFace"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/smile_record"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

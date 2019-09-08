@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:padding="@dimen/default_side_padding">
+
+        <TextView
+            android:id="@+id/shareTitle"
+            style="@style/StyleGuideText.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:lines="2"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:text="@string/lorem_ipsum"
+            android:textColor="@color/s_medium_grey" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.mikepenz.iconics.view.IconicsTextView
+                android:id="@+id/previousContact"
+                android:text="{gmd-replay}"
+                android:textColor="@color/s_medium_grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_xl"
+                android:padding="8dp"
+                android:contentDescription="@string/ac_previous_contact"
+                tools:text="_"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/skipButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/on_boarding_button_height"
+                style="?android:attr/buttonBarButtonStyle"
+                android:elevation="0dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="@string/skip_button"
+                android:textColor="@color/s_medium_grey"
+                tools:targetApi="lollipop" />
+
+            <Button
+                android:id="@+id/inviteButton"
+                style="@style/OnBoardingButton.Blue"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/on_boarding_button_height"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="@string/invite_button"
+                android:theme="@style/OnBoardingButton.Blue" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/doneLabel"
+        style="@style/StyleGuideText.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/no_more_invites"
+        android:textColor="@color/s_dark_grey"
+        android:visibility="gone"
+        tools:visibility="visible" />
+</RelativeLayout>

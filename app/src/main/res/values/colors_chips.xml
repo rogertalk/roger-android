@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="paper">#fafafa</color>
+
+    <color name="color_error">#FFCB0017</color>
+
+    <color name="base30">#c1c1c1</color>
+
+</resources>

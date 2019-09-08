@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:elevation="@dimen/elevation_l1"
+        tools:targetApi="lollipop"
+        android:background="@color/opaque_white" />
+
+    <!-- Toolbar -->
+
+    <include layout="@layout/white_toolbar_contacts" />
+
+    <!-- Search bar -->
+    <RelativeLayout
+        android:id="@+id/searchArea"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/contacts_search_collapsed_size"
+        android:layout_below="@id/toolbar"
+        android:background="@color/opaque_white"
+        android:elevation="@dimen/elevation_l1"
+        tools:targetApi="lollipop">
+
+        <com.mikepenz.iconics.view.IconicsTextView
+            android:id="@+id/searchIcon"
+            style="@style/StyleGuideText.SubHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_side_padding"
+            android:layout_marginTop="14dp"
+            android:importantForAccessibility="yes"
+            android:text="{gmd-search}"
+            tools:ignore="HardcodedText"
+            tools:text="O" />
+
+        <ScrollView
+            android:id="@+id/scrollViewChips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_side_padding"
+            android:layout_marginRight="@dimen/default_side_padding"
+            android:layout_toRightOf="@id/searchIcon"
+            android:scrollbars="none"
+            tools:ignore="RtlHardcoded">
+
+            <com.rogertalk.roger.ui.chips.ChipsView
+                android:id="@+id/chipsView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:scrollbars="none"
+                android:textColor="@color/opaque_black"
+                android:textColorHint="@color/medium_grey"
+                android:textSize="@dimen/font_subheader" />
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <!-- Contacts list -->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/contactList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchArea"
+        android:contentDescription="@string/ac_select_anyone_explanation"
+        android:fadingEdge="vertical"
+        android:importantForAccessibility="yes"
+        android:scrollbars="vertical" />
+
+    <!-- Username and display name explanations -->
+
+    <TextView
+        android:id="@+id/usernameExplanationLabel"
+        style="@style/StyleGuideText.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchArea"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/default_side_padding"
+        android:layout_marginRight="@dimen/default_side_padding"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:importantForAccessibility="yes"
+        android:maxLines="2"
+        android:text="@string/search_username_explanation"
+        android:textColor="@color/s_medium_grey"
+        android:textSize="@dimen/font_subheader"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/displayNameExplanationLabel"
+        style="@style/StyleGuideText.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameExplanationLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/default_side_padding"
+        android:layout_marginRight="@dimen/default_side_padding"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:importantForAccessibility="yes"
+        android:maxLines="2"
+        android:text="@string/search_display_name_explanation"
+        android:textColor="@color/s_medium_grey"
+        android:textSize="@dimen/font_subheader"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</RelativeLayout>

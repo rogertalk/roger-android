@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- States -->
+    <string name="ac_checked">Checked</string>
+    <string name="ac_not_checked">Not Checked</string>
+
+    <!--Landing Screen -->
+    <string name="ac_slogan">Roger, Talk more often</string>
+
+    <!-- Talk Screen -->
+    <string name="ac_microphone">Microphone</string>
+    <string name="ac_microphone_stop">Stop Recording</string>
+    <string name="ac_microphone_send">Tap to send</string>
+    <string name="ac_conversations_list">Conversations</string>
+    <string name="ac_tap_to_listen_re_listen">Re-listen</string>
+    <string name="ac_tap_to_listen_no_messages">No messages</string>
+    <string name="ac_replay_last">Rewind playback</string>
+    <string name="ac_skip">Skip</string>
+    <string name="ac_settings_avatar">Avatar setup</string>
+    <string name="ac_loading_more">Loading older conversations</string>
+    <string name="ac_add_people">Add people</string>
+    <string name="ac_empty_group_description">This conversation is still empty. Press Add members to add or re-invite members to it</string>
+    <string name="ac_manage_conversation">Manage conversation</string>
+    <string name="ac_attachments">Manage Attachments</string>
+    <string name="ac_attachments_content">New Attachment</string>
+    <string name="ac_playback_speed">Speed %1$s</string>
+
+    <!-- OnBoarding Primer-->
+    <string name="ac_primer_title">Hello %1$s, who do you want to talk more often with?</string>
+    <string name="ac_loading_more_groups">Loading more</string>
+
+    <!-- Will become : Listen, 2 seconds  OR Listen, 1 second -->
+    <string name="ac_tap_to_listen_unplayed">Listen, %1$s</string>
+
+    <!-- Will read: 'Pedro, unheard' on conversations list-->
+    <string name="ac_unheard">%1$s, unheard</string>
+
+    <!-- Displayed for TalkBack users when playback is in progress -->
+    <string name="ac_tap_to_stop">Pause</string>
+
+    <string name="ac_talking_to_you_notification">is talking to you</string>
+    <string name="ac_add_selected_users">Add selected people</string>
+    <string name="ac_group_participants">Show people in this conversation</string>
+    <string name="ac_number_selected_members">Add Members, %1$s currently selected</string>
+
+    <string name="ac_select_anyone_explanation">Select anyone. After you\'re done tap the button in top-right corner.</string>
+
+    <!-- Pedro is in New York, the local time is 6:02 pm, it's 20 degrees and sunny -->
+    <string name="ac_card_state_description">%1$s is in %2$s, the local time is %3$s, it\'s %4$s and %5$s</string>
+
+    <!-- Lobby -->
+    <string name="ac_start_conversation">Go to conversation</string>
+    <string name="ac_remind_text">Press to remind this person</string>
+    <string name="ac_contact_action_description_text">Press a member to start 1 to 1 conversation</string>
+    <string name="ac_contact_info_action">Options for %1$s</string>
+    <string name="ac_previous_contact">Previous contact</string>
+
+    <!-- Soundojis -->
+    <string name="ac_laughing">Audience Laughing</string>
+    <string name="ac_rimshot">Comedy rimshot</string>
+    <string name="ac_cricket">Awkward Cricket</string>
+
+</resources>

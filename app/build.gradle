@@ -1,0 +1,169 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'realm-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    dexOptions {
+        maxProcessCount 2
+        javaMaxHeapSize "2g"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "com.rogertalk.roger"
+        minSdkVersion 16
+        targetSdkVersion 24
+        versionCode 163
+        versionName "2.0.12"
+
+        // Multidex support.
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            jniDebuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            jniDebuggable false
+            minifyEnabled false
+        }
+    }
+    sourceSets {
+        main {
+            java.srcDirs += 'src/main/kotlin'
+            jni.srcDirs = []
+            jniLibs.srcDir 'src/main/libs'
+        }
+    }
+
+    productFlavors {
+        production {
+        }
+        staging {
+        }
+    }
+
+    // remove unnecessary files from package
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+}
+
+dependencies {
+    // Multi-dex Support
+    compile 'com.android.support:multidex:1.0.1'
+
+    compile "com.android.support:appcompat-v7:$google_lib_version"
+    compile "com.android.support:recyclerview-v7:$google_lib_version"
+    compile "com.android.support:design:$google_lib_version"
+    compile "com.android.support:percent:$google_lib_version"
+    compile 'com.github.bumptech.glide:glide:3.8.0-SNAPSHOT'
+    compile 'com.github.bumptech.glide:okhttp-integration:1.5.0-SNAPSHOT'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.github.orhanobut:hawk:1.23'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.googlecode.libphonenumber:libphonenumber:7.7.2'
+    compile 'com.karumi:dexter:2.3.1'
+    compile 'com.theartofdev.edmodo:android-image-cropper:2.3.1'
+    compile 'org.jetbrains.anko:anko-sdk15:0.9'
+    compile 'com.facebook.rebound:rebound:0.3.8'
+
+    // Audio
+    compile 'com.google.android.exoplayer:exoplayer:r1.5.10'
+
+    // Multi-tasking
+    compile 'nl.komponents.kovenant:kovenant:3.3.0'
+    compile 'nl.komponents.kovenant:kovenant-android:3.3.0'
+
+    //Emojis, Fonts and Text-related
+    compile 'me.grantland:autofittextview:0.2.1'
+    compile "com.mikepenz:iconics-core:2.8.1@aar"
+    compile 'com.mikepenz:google-material-typeface:2.2.0.2.original@aar'
+
+    // Material Design backwards support
+    compile 'com.pnikosis:materialish-progress:1.7'
+    compile 'com.github.ksoichiro:android-observablescrollview:1.6.0'
+    compile 'com.balysv:material-ripple:1.0.2'
+    compile 'com.afollestad.material-dialogs:core:0.8.6.2'
+    compile 'com.github.pedronveloso:MaterialIntroView:1.5.6'
+
+    compile('com.mikepenz:aboutlibraries:5.8.1@aar') {
+        transitive = true
+    }
+
+    // Badge notifications
+    compile 'me.leolin:ShortcutBadger:1.1.10@aar'
+
+    compile project(':Jubatus')
+
+    // GCM support
+    compile 'com.google.android.gms:play-services-gcm:9.6.1'
+
+    // Google Play Services Location
+    compile 'com.google.android.gms:play-services-location:9.6.1'
+
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.2@aar') {
+        transitive = true;
+    }
+
+    // Debug builds only
+    debugCompile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+}
+buildscript {
+    ext.google_lib_version = '24.2.1'
+    repositories {
+        maven { url "https://dl.bintray.com/kotlin/kotlin-eap" }
+        maven { url 'https://maven.fabric.io/public' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${rootProject.ext.kotlin_version}"
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:{rootProject.ext.kotlin_version}"
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+repositories {
+    mavenCentral()
+    jcenter()
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url "https://jitpack.io" }
+
+    // Definition for Glide snapshots
+    maven {
+        name 'glide-snapshot'
+        url 'http://oss.sonatype.org/content/repositories/snapshots'
+    }
+}
+
+apply plugin: 'com.google.gms.google-services'

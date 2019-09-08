@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- use this file for any dimensions given on 'pt' units -->
+
+    <dimen name="raise_to_hear_padding">10dp</dimen>
+    <dimen name="notification_size">60dp</dimen>
+
+</resources>

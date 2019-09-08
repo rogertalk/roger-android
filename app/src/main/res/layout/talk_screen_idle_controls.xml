@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@color/opaque_black">
+    <!-- tools:showIn="@layout/talk_screen" -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_weight="1" />
+
+        <!-- Attachments area -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/attachmentsArea"
+                    android:layout_width="@dimen/audio_control_diameter"
+                    android:layout_height="@dimen/audio_control_diameter"
+                    android:background="@drawable/circumference_white"
+                    android:contentDescription="@string/ac_attachments"
+                    android:importantForAccessibility="yes">
+
+                    <com.mikepenz.iconics.view.IconicsTextView
+                        android:id="@+id/attachmentIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:importantForAccessibility="no"
+                        android:text="{gmd-link}"
+                        android:textColor="@color/opaque_white"
+                        android:textSize="@dimen/font_xl"
+                        tools:ignore="HardcodedText"
+                        tools:text="=" />
+
+                    <ImageView
+                        android:id="@+id/attachmentPreview"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/roger_notification_small" />
+
+                </RelativeLayout>
+
+                <!-- Attachments CTA -->
+                <FrameLayout
+                    android:id="@+id/attachmentsCTA"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignBottom="@id/attachmentsArea"
+                    android:layout_alignRight="@id/attachmentsArea"
+                    android:background="@drawable/circle_red">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="!"
+                        android:textColor="@color/opaque_white"
+                        android:textSize="@dimen/font_xs"
+                        tools:ignore="HardcodedText" />
+
+                </FrameLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:importantForAccessibility="no"
+                android:text="@string/talk_screen_share_label"
+                android:textColor="@color/white_80"
+                android:textSize="@dimen/font_m" />
+
+
+        </LinearLayout>
+
+
+        <!-- Buzz Button -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/buzzContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:contentDescription="@string/talk_screen_buzz_label"
+                android:focusable="true"
+                android:importantForAccessibility="yes"
+                android:padding="5dp"
+                tools:ignore="RtlHardcoded">
+
+                <ImageView
+                    android:layout_width="@dimen/audio_control_diameter"
+                    android:layout_height="@dimen/audio_control_diameter"
+                    android:layout_centerInParent="true"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/circumference_white" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/bee" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:importantForAccessibility="no"
+                android:text="@string/talk_screen_buzz_label"
+                android:textColor="@color/white_80"
+                android:textSize="@dimen/font_m" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</RelativeLayout>

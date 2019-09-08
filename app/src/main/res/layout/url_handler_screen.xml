@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/LayoutSidePadding.OnBoarding"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/day_background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/titleLabel"
+        style="@style/OnBoardingText.Font1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        app:layout_marginTopPercent="10%"
+        android:textColor="@color/opaque_white" />
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/progressWheel"
+        android:layout_below="@id/titleLabel"
+        android:elevation="0dp"
+        app:layout_marginTopPercent="20%"
+        style="@style/OnBoardingCircleProgress.White"
+        android:layout_width="@dimen/contact_circle_diameter"
+        android:layout_height="@dimen/contact_circle_diameter"
+        android:layout_centerHorizontal="true"
+        tools:targetApi="lollipop" />
+
+    <TextView
+        android:id="@+id/messageLabel"
+        style="@style/StyleGuideText.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressWheel"
+        app:layout_marginTopPercent="1%"
+        app:layout_widthPercent="80%"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="@string/please_wait"
+        android:textColor="@color/opaque_white" />
+
+
+</android.support.percent.PercentRelativeLayout>

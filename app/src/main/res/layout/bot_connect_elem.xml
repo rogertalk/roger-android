@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/opaque_white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/botBox"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:importantForAccessibility="yes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/botAvatar"
+            android:layout_width="@dimen/contact_big_circle_diameter"
+            android:layout_height="@dimen/contact_big_circle_diameter"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="30dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/pee" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="106dp"
+            android:background="@color/s_accent_grey_2"
+            android:importantForAccessibility="no"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_side_padding"
+                android:layout_weight="1"
+                android:background="@color/s_accent_grey_2"
+                android:importantForAccessibility="yes"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/botName"
+                    style="@style/StyleGuideText.SubHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:importantForAccessibility="no"
+                    android:maxLines="2"
+                    android:text="@string/lorem_ipsum"
+                    android:textColor="@color/s_dark_grey" />
+
+                <TextView
+                    android:id="@+id/botDescription"
+                    style="@style/StyleGuideText.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|top"
+                    android:importantForAccessibility="no"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:paddingTop="2dp"
+                    android:text="@string/lorem_ipsum"
+                    android:textColor="@color/s_medium_grey" />
+            </LinearLayout>
+
+            <com.mikepenz.iconics.view.IconicsTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:importantForAccessibility="no"
+                android:padding="5dp"
+                android:text="{gmd-keyboard-arrow-right}"
+                android:textColor="@color/s_accent_grey_1"
+                android:textSize="@dimen/font_huge"
+                tools:ignore="HardcodedText"
+                tools:text=">" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

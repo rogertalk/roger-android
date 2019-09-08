@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="LayoutSidePadding">
+        <item name="android:paddingLeft">@dimen/default_side_padding</item>
+        <item name="android:paddingStart" tools:targetApi="jelly_bean_mr1">
+            @dimen/default_side_padding
+        </item>
+        <item name="android:paddingEnd" tools:targetApi="jelly_bean_mr1">
+            @dimen/default_side_padding
+        </item>
+        <item name="android:paddingRight">@dimen/default_side_padding</item>
+    </style>
+
+    <style name="LayoutSidePadding.OnBoarding">
+        <item name="android:paddingLeft">@dimen/on_boarding_side_padding</item>
+        <item name="android:paddingStart" tools:targetApi="jelly_bean_mr1">
+            @dimen/on_boarding_side_padding
+        </item>
+        <item name="android:paddingEnd" tools:targetApi="jelly_bean_mr1">
+            @dimen/on_boarding_side_padding
+        </item>
+        <item name="android:paddingRight">@dimen/on_boarding_side_padding</item>
+    </style>
+
+    <style name="HorizontalSeparator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/default_side_padding</item>
+        <item name="android:layout_marginRight">@dimen/default_side_padding</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/s_light_grey</item>
+    </style>
+
+</resources>
